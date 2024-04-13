@@ -28,7 +28,7 @@ export const Header: React.FC = () => {
         },
         {
             link: () => (<>
-                <button>Log in or sign up</button>
+                <button className='bg-[#F16E22] text-white px-3 rounded-md py-2'>Log in or sign up</button>
             </>)
         }
 
@@ -40,7 +40,7 @@ export const Header: React.FC = () => {
                     <div className="h-[56px] w-[309px] p-4 ml-10">
                         <img src={ImaginCraftLogo} alt="imaginCraft Logo" />
                     </div>
-                    <div className='flex mt-8 gap-6 mr-16'>
+                    <div className='flex mt-6 gap-6 mr-16 items-center'>
                         {
                             links?.map((link: Links, index: number) => (<React.Fragment key={index}>{link?.link('no props')}</React.Fragment>))
                         }
