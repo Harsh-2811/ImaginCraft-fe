@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.plus-jakarta sans-plus {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.blackText {
+  color: #2f2f2f;
+}
+* {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
