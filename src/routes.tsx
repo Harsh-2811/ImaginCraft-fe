@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom'
 import App from './App'
 import { Header } from './components/Header'
 import Playground from './pages/Playground'
+import { SignIn } from './pages/SignIn'
 
 export const router = createBrowserRouter(
   [
@@ -27,6 +28,10 @@ export const router = createBrowserRouter(
       //     }
       // ]
     },
+    {
+      path: "/signin",
+      element: <SignIn />
+    }
   ],
   { basename: '/' }
 )
