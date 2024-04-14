@@ -3,7 +3,7 @@ import facebookLogo from '../assets/facebook.png'
 import googleLogo from '../assets/google.png'
 import { Link } from 'react-router-dom'
 
-export const SignIn = () => {
+export const SignUp = () => {
   return (
     <>
       <DesignWrapper>
@@ -14,7 +14,7 @@ export const SignIn = () => {
             <div className="absolute inset-0 flex flex-col p-4 mt-[500px] lg:p-8">
               <div className="">
                 <p className="font-bold text-3xl lg:text-5xl text-white">
-                  Welcome back!
+                  You are new here!
                 </p>
               </div>
               <div className="mt-1">
@@ -28,10 +28,18 @@ export const SignIn = () => {
           {/* login right side */}
           <div className="bg-white ml-32">
             <div className="mt-10 text-center">
-              <p className="text-3xl font-bold text-blue-800">Sign In</p>
+              <p className="text-3xl font-bold text-blue-800">Sign Up</p>
             </div>
             <div className="mt-2 p-8">
               <div className="flex flex-col">
+                <label className="">Full Name</label>
+                <input
+                  type="text"
+                  className="border rounded px-2 py-2"
+                  placeholder="Enter Your Name"
+                />
+              </div>
+              <div className="flex flex-col mt-4">
                 <label className="">Email Address</label>
                 <input
                   type="text"
@@ -41,6 +49,14 @@ export const SignIn = () => {
               </div>
               <div className="flex mt-4 flex-col">
                 <label className="">Password</label>
+                <input
+                  type="text"
+                  className="border rounded px-2 py-2"
+                  placeholder="Enter Your Password"
+                />
+              </div>
+              <div className="flex mt-4 flex-col">
+                <label className="">Confirm Password</label>
                 <input
                   type="text"
                   className="border rounded px-2 py-2"
@@ -58,13 +74,9 @@ export const SignIn = () => {
                     htmlFor="default-checkbox"
                     className="ms-2 text-sm font-medium text-gray-900"
                   >
-                    Remember Me
+                    I agree to the <a className="text-orange-400">Terms</a> and{' '}
+                    <a className="text-orange-400">Privacy Policy.</a>
                   </label>
-                </div>
-                <div>
-                  <p className="text-orange-600">
-                    <Link to={'/forgot-password'}>Forgot Password?</Link>
-                  </p>
                 </div>
               </div>
               <div className="mt-2">
@@ -72,7 +84,7 @@ export const SignIn = () => {
                   type="button"
                   className="w-full focus:outline-none text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-orange-900"
                 >
-                  Sign In
+                  Sign Up
                 </button>
               </div>
               <div className="mt-3">
@@ -100,9 +112,9 @@ export const SignIn = () => {
               </div>
               <div className="text-center mt-4">
                 <p className="font-semibold">
-                  Don't have an account?{' '}
-                  <Link to={'/signup'} className="text-orange-500">
-                    Sign Up
+                  Already have an account?{' '}
+                  <Link to={'/signin'} className="text-orange-500">
+                    Sign In
                   </Link>
                 </p>
               </div>
