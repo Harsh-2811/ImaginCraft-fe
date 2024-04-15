@@ -9,8 +9,8 @@ export const SignIn = () => {
       <DesignWrapper>
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* login left side */}
-          <div className="relative h-[697px]">
-            <div className="bg-authside-bg h-full opacity-100 w-full bg-no-repeat"></div>
+          <div className="relative h-[697px] max-w-[697px]">
+            <div className="bg-authside-bg  bg-[length:100%_100%] h-[697px] opacity-100 w-[690px] bg-no-repeat"></div>
             <div className="absolute inset-0 flex flex-col p-4 mt-[500px] lg:p-8">
               <div className="">
                 <p className="font-bold text-3xl lg:text-5xl text-white">
