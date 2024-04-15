@@ -6,6 +6,7 @@ import rightImg from '../assets/rightImg.png'
 import logoText from '../assets/logo_text.png'
 import robotImage from '../assets/robotImg.png'
 import playgroundRouteIcon from '../assets/playgroundRouteIcon.svg'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
@@ -218,6 +219,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </>
   )
 }
