@@ -1,8 +1,7 @@
 import { DesignWrapper } from '../components/designWrapper'
 import { Link } from 'react-router-dom'
-import bgAuthImage from "../assets/authimages.png"
-import appLogo from "../assets/logo.png"
-
+import bgAuthImage from '../assets/authimages.png'
+import appLogo from '../assets/logo.png'
 
 export const NewPassword = () => {
   return (
@@ -12,10 +11,10 @@ export const NewPassword = () => {
           {/* login left side */}
           <div className="relative h-[697px] max-w-full lg:max-w-[690px] md:col-span-6 lg:col-span-7">
             {/* <div className="bg-authside-bg h-full opacity-100 w-full bg-no-repeat"></div> */}
-            <div className='bg-white w-[204px] px-2 py-3 absolute top-0 left-0 rounded-tl-[5px] rounded-br-[5px] '>
+            <div className="bg-white w-[204px] px-2 py-3 absolute top-0 left-0 rounded-tl-[5px] rounded-br-[5px] ">
               <img src={appLogo} />
             </div>
-            <img src={bgAuthImage} className='w-full h-full' />
+            <img src={bgAuthImage} className="w-full h-full" />
             <div className="absolute bottom-0 flex flex-col p-4 mt-[500px] lg:p-8">
               <div className="">
                 <p className="font-bold text-3xl lg:text-5xl text-white">

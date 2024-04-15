@@ -42,67 +42,96 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='text-center '>
-        <button className='border border-[#0081A8] text-[#0081A8] text-[13px] rounded-[5px] py-2 px-3 mb-3 uppercase'>huge collection</button>
-        <h2 className='text-[#2F2F2F] text-[40px] text-center font-bold mb-10 leading-[50px]'>
+      <div className="text-center ">
+        <button className="border border-[#0081A8] text-[#0081A8] text-[13px] rounded-[5px] py-2 px-3 mb-3 uppercase">
+          huge collection
+        </button>
+        <h2 className="text-[#2F2F2F] text-[40px] text-center font-bold mb-10 leading-[50px]">
           Generate all AI image for <br></br> your working
         </h2>
       </div>
-      <div className='grid gap-12 md:grid-cols-2 text-[#2F2F2F]'>
-        <div className='relative '>
-          <div className='absolute top-[130px]  w-[95%] h-[394px]'>
-            <img className='h-full w-full rounded-tr-[16px] rounded-br-[16px] object-cover' src='https://s3-alpha-sig.figma.com/img/776f/da1c/fb5b145ed7f3edd720edd3ff25f0ff6d?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NHkfZZIQLvgCLbhMIUZxh2k4xBiytS97zrJXhYW1kgMznO8hF8MkLm-UC57tMoREwEnT-LTJhfJRWsFxScDC4RMZA7yp9tpzAPqyQQI3IrbtnKos6HIjhQ8E1aoUTL4js2CN6d75PBqWrCZqM0Xo20nV-IEqxp1n5OHFrIHtfuRtwo7O3PLaAdKMmZGqyGgL0YcHBtF6QE0rkN0z5ZFl2as9CRw-Zf9ckAfjEJOVBsejKaexkU6zunvqordZno46Y~aml9Urdy8YLD-ScYh4LSC9bM6AfLAbNwPyFDh4lEMQ5DcIcFvc2OwrUHkA4fh~VQyqoVAfbR7obFNOA4FZ1w__' />
+
+      <div className='grid grid-cols-4'>
+
+      </div>
+
+      <div className="grid gap-12 md:grid-cols-2 text-[#2F2F2F]">
+        <div className="relative ">
+          <div className="absolute top-[130px]  w-[95%] h-[394px]">
+            <img
+              className="h-full w-full rounded-tr-[16px] rounded-br-[16px] object-cover"
+              src="https://s3-alpha-sig.figma.com/img/776f/da1c/fb5b145ed7f3edd720edd3ff25f0ff6d?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NHkfZZIQLvgCLbhMIUZxh2k4xBiytS97zrJXhYW1kgMznO8hF8MkLm-UC57tMoREwEnT-LTJhfJRWsFxScDC4RMZA7yp9tpzAPqyQQI3IrbtnKos6HIjhQ8E1aoUTL4js2CN6d75PBqWrCZqM0Xo20nV-IEqxp1n5OHFrIHtfuRtwo7O3PLaAdKMmZGqyGgL0YcHBtF6QE0rkN0z5ZFl2as9CRw-Zf9ckAfjEJOVBsejKaexkU6zunvqordZno46Y~aml9Urdy8YLD-ScYh4LSC9bM6AfLAbNwPyFDh4lEMQ5DcIcFvc2OwrUHkA4fh~VQyqoVAfbR7obFNOA4FZ1w__"
+            />
           </div>
-          <div className='border border-[#F16E22] border-l-0 h-[455px] rounded-tr-[16px] rounded-br-[16px] bg-light-orange'>
-            <div className='flex justify-center mt-[32px]'>
+          <div className="border border-[#F16E22] border-l-0 h-[455px] rounded-tr-[16px] rounded-br-[16px] bg-light-orange">
+            <div className="flex justify-center mt-[32px]">
               <div>
-                <h4 className='font-extrabold	text-[38px] mb-0 pb-0 leading-[45px]'>1M+</h4>
-                <p className='font-semibold	text-[13px] text-[#0081A8] uppercase'>Peoples are using</p>
+                <h4 className="font-extrabold	text-[38px] mb-0 pb-0 leading-[45px]">
+                  1M+
+                </h4>
+                <p className="font-semibold	text-[13px] text-[#0081A8] uppercase">
+                  Peoples are using
+                </p>
               </div>
-              <div className='mx-5'>
-                <h4 className='font-extrabold	text-[38px] mb-0 pb-0 leading-[45px]'>100%</h4>
-                <p className='font-semibold	text-[13px] text-[#0081A8] uppercase'>Happy Customers</p>
+              <div className="mx-5">
+                <h4 className="font-extrabold	text-[38px] mb-0 pb-0 leading-[45px]">
+                  100%
+                </h4>
+                <p className="font-semibold	text-[13px] text-[#0081A8] uppercase">
+                  Happy Customers
+                </p>
               </div>
               <div>
-                <h4 className='font-extrabold	text-[38px] mb-0 pb-0 leading-[45px]'>1M+</h4>
-                <p className='font-semibold	text-[13px] text-[#0081A8] uppercase'>Peoples are using</p>
+                <h4 className="font-extrabold	text-[38px] mb-0 pb-0 leading-[45px]">
+                  1M+
+                </h4>
+                <p className="font-semibold	text-[13px] text-[#0081A8] uppercase">
+                  Peoples are using
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <div className='mt-[30px] md:mt-0 ps-[20px] md:ps-0'>
-          <h2 className='text-[34px] font-bold max-w-[476px]'>Architecting the <span className='text-[#00AEB8] '>Digital Future</span></h2>
-          <p className='text-[16px] text-[#565656] mt-3 max-w-[476px]'>Lorem Ipsum is simply dummy text of the printing and typesetting
+        <div className="mt-[30px] md:mt-0 ps-[20px] md:ps-0">
+          <h2 className="text-[34px] font-bold max-w-[476px]">
+            Architecting the{' '}
+            <span className="text-[#00AEB8] ">Digital Future</span>
+          </h2>
+          <p className="text-[16px] text-[#565656] mt-3 max-w-[476px]">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.</p>
-          <p className='text-[16px] text-[#565656] mt-3 max-w-[476px]'>Lorem Ipsum is simply dummy text of the printing and typesetting
+            and scrambled it to make a type specimen book.
+          </p>
+          <p className="text-[16px] text-[#565656] mt-3 max-w-[476px]">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.</p>
-          <div className='mt-4 font-semibold'>
-            <div className='flex items-center mt-2'>
+            ever since the 1500s.
+          </p>
+          <div className="mt-4 font-semibold">
+            <div className="flex items-center mt-2">
               <img src={doubleTickIcon} />
-              <p className='ms-2'>Architecting the Digital Future</p>
+              <p className="ms-2">Architecting the Digital Future</p>
             </div>
-            <div className='flex items-center mt-2'>
+            <div className="flex items-center mt-2">
               <img src={doubleTickIcon} />
-              <p className='ms-2'>Architecting the Digital Future</p>
+              <p className="ms-2">Architecting the Digital Future</p>
             </div>
-            <div className='flex items-center mt-2'>
+            <div className="flex items-center mt-2">
               <img src={doubleTickIcon} />
-              <p className='ms-2'>Architecting the Digital Future</p>
+              <p className="ms-2">Architecting the Digital Future</p>
             </div>
-            <div className='flex items-center mt-2'>
+            <div className="flex items-center mt-2">
               <img src={doubleTickIcon} />
-              <p className='ms-2'>Architecting the Digital Future</p>
+              <p className="ms-2">Architecting the Digital Future</p>
             </div>
-            <div className='flex items-center mt-2'>
+            <div className="flex items-center mt-2">
               <img src={doubleTickIcon} />
-              <p className='ms-2'>Architecting the Digital Future</p>
+              <p className="ms-2">Architecting the Digital Future</p>
             </div>
-            <div className='flex items-center mt-2'>
+            <div className="flex items-center mt-2">
               <img src={doubleTickIcon} />
-              <p className='ms-2'>Architecting the Digital Future</p>
+              <p className="ms-2">Architecting the Digital Future</p>
             </div>
           </div>
         </div>
