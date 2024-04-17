@@ -2,16 +2,22 @@ import { DesignWrapper } from '../components/designWrapper'
 import facebookLogo from '../assets/facebook.png'
 import googleLogo from '../assets/google.png'
 import { Link } from 'react-router-dom'
+import bgAuthImage from '../assets/authimages.png'
+import appLogo from '../assets/logo.png'
 
 export const SignIn = () => {
   return (
     <>
       <DesignWrapper>
-        <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12">
           {/* login left side */}
-          <div className="relative h-[697px]">
-            <div className="bg-authside-bg h-full opacity-100 w-full bg-no-repeat"></div>
-            <div className="absolute inset-0 flex flex-col p-4 mt-[500px] lg:p-8">
+          <div className="relative h-[697px] max-w-full lg:max-w-[690px] md:col-span-6 lg:col-span-7">
+            {/* <div className="bg-authside-bg  bg-[length:100%_100%] h-[697px] opacity-100 w-[690px] bg-no-repeat"></div> */}
+            <div className="bg-white w-[204px] px-2 py-3 absolute top-0 left-0 rounded-tl-[5px] rounded-br-[5px] ">
+              <img src={appLogo} />
+            </div>
+            <img src={bgAuthImage} className="w-full h-full" />
+            <div className="absolute flex flex-col p-4 bottom-0 lg:p-8">
               <div className="">
                 <p className="font-bold text-3xl lg:text-5xl text-white">
                   Welcome back!
@@ -26,7 +32,7 @@ export const SignIn = () => {
           </div>
 
           {/* login right side */}
-          <div className="bg-white ml-32">
+          <div className="bg-white md:col-span-6 lg:col-span-5">
             <div className="mt-10 text-center">
               <p className="text-3xl font-bold text-blue-800">Sign In</p>
             </div>
