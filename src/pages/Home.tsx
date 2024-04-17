@@ -6,10 +6,12 @@ import logoText from '../assets/logo_text.png'
 import robotImage from '../assets/robotImg.png'
 import playgroundRouteIcon from '../assets/playgroundRouteIcon.svg'
 import doubleTickIcon from '../assets/doubleTickIcon.svg'
+import MovingText from "../components/MovingText"
 
 const Home = () => {
   return (
     <>
+
       <div className="max-w-[1200px] mx-auto">
         <div className="my-14">
           <div className="flex justify-between">
@@ -41,7 +43,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
       <div className="text-center ">
         <button className="border border-[#0081A8] text-[#0081A8] text-[13px] rounded-[5px] py-2 px-3 mb-3 uppercase">
           huge collection
@@ -51,9 +52,7 @@ const Home = () => {
         </h2>
       </div>
 
-      <div className='grid grid-cols-4'>
-
-      </div>
+      <div className="grid grid-cols-4"></div>
 
       <div className="grid gap-12 md:grid-cols-2 text-[#2F2F2F]">
         <div className="relative ">
@@ -136,6 +135,17 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <MovingText />
+
+
+
+      <div className='grid md:grid-cols-4'>
+        <div className=''></div>
+
+      </div>
+
+
       <div className="max-w-[1200px] mx-auto">
         <div className="my-5">
           <div className="flex items-center flex-wrap">
