@@ -16,7 +16,10 @@ export const SignIn = () => {
             <div className="bg-white w-[204px] px-2 py-3 absolute top-0 left-0 rounded-tl-[5px] rounded-br-[5px] ">
               <img src={appLogo} />
             </div>
-            <img src={bgAuthImage} className="w-full h-full max-h-[80%} rounded-br-[8px] md:rounded-bl-[8px] md:rounded-tl-[8px] rounded-tl-[8px] md:rounded-tr-[0px] md:rounded-br-[0px]" />
+            <img
+              src={bgAuthImage}
+              className="w-full h-full max-h-[80%} rounded-br-[8px] md:rounded-bl-[8px] md:rounded-tl-[8px] rounded-tl-[8px] md:rounded-tr-[0px] md:rounded-br-[0px]"
+            />
             <div className="absolute flex flex-col p-4 bottom-0 lg:p-8">
               <div className="">
                 <p className="font-bold text-3xl lg:text-5xl text-white">

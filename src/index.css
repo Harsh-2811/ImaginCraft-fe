@@ -16,11 +16,11 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-.cardContent{
+.cardContent {
   /* background-image: url(./assets/cardBg.png); */
 }
 
-.cardContent:hover{
+.cardContent:hover {
   /* background-color: red; */
   background-image: url(./assets/cardBg.png);
   transition: background-image 1s;
@@ -31,7 +31,7 @@
   transform: translateY(0);
 }
 
-.cardTextContent{
+.cardTextContent {
   height: 100px;
   overflow: hidden;
 }
@@ -40,7 +40,7 @@
   display: none;
 }
 
-.cardContent:hover .cardTextContent{
+.cardContent:hover .cardTextContent {
   overflow: auto;
   height: 200px;
   transition: all 0.3s;
@@ -48,45 +48,42 @@
 
 /* animated circulat text css */
 
-
 .circle {
-	position: relative;
-	width: 150px;
-	height: 150px;
-	border-radius: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius:100%;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
 }
 
-
 .text {
-	position: absolute;
-	width: 100%;
-	border-radius:50%;
-	height: 100%;
-	font-family: consolas;
-	color: #000;
-	font-size: 17px;
-	animation: textRotation 10s linear infinite;
+  position: absolute;
+  width: 100%;
+  border-radius: 50%;
+  height: 100%;
+  font-family: consolas;
+  color: #000;
+  font-size: 17px;
+  animation: textRotation 10s linear infinite;
 }
 
 @keyframes textRotation {
-	to {
-		transform: rotate(360deg);
-	}
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .text span {
-	position: absolute;
-	left: 50%;
-	top:0%;
-	font-size: 12px;
-	color:white;
-	transform-origin: 0 75px;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  font-size: 12px;
+  color: white;
+  transform-origin: 0 75px;
 }
-
 
 :root {
   --primary: #6a59ff;
@@ -112,12 +109,11 @@
   background: #f9f9f9;
 }
 
-
 .slider-container {
   max-width: 124rem;
   padding: 4rem 1rem;
   margin: 0 auto;
-  height:600px;
+  height: 600px;
 }
 
 .heading {
@@ -132,7 +128,7 @@
   position: relative;
 }
 
-.active-siblings{
+.active-siblings {
   /* margin-top: 20px !important; */
 }
 

@@ -10,7 +10,7 @@ export default {
       colors: {
         'light-orange': 'rgba(241, 110, 34, 0.05)',
         'shadow-color': 'rgba(0, 0, 0, 0.06)',
-        'blue-bg':'rgba(0, 71, 122, 1)'
+        'blue-bg': 'rgba(0, 71, 122, 1)',
       },
     },
   },

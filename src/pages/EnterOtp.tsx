@@ -32,7 +32,9 @@ export const EnterOtp = () => {
           {/* login right side */}
           <div className="bg-white md:col-span-6 lg:col-span-5">
             <div className="mt-10 text-center">
-              <p className="text-[34px] font-bold text-blue-800">Forgot password</p>
+              <p className="text-[34px] font-bold text-blue-800">
+                Forgot password
+              </p>
             </div>
             <div className="mt-2">
               <div className="mt-5">
