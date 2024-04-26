@@ -11,12 +11,12 @@ export const SignIn = () => {
       <DesignWrapper>
         <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12">
           {/* login left side */}
-          <div className="relative h-[697px] max-w-full lg:max-w-[690px] md:col-span-6 lg:col-span-7">
+          <div className="relative mt-[50px] md:mt-0 max-h-[697px] max-w-full lg:max-w-[690px] md:col-span-6 lg:col-span-7">
             {/* <div className="bg-authside-bg  bg-[length:100%_100%] h-[697px] opacity-100 w-[690px] bg-no-repeat"></div> */}
             <div className="bg-white w-[204px] px-2 py-3 absolute top-0 left-0 rounded-tl-[5px] rounded-br-[5px] ">
               <img src={appLogo} />
             </div>
-            <img src={bgAuthImage} className="w-full h-full" />
+            <img src={bgAuthImage} className="w-full h-full max-h-[80%} rounded-br-[8px] md:rounded-bl-[8px] md:rounded-tl-[8px] rounded-tl-[8px] md:rounded-tr-[0px] md:rounded-br-[0px]" />
             <div className="absolute flex flex-col p-4 bottom-0 lg:p-8">
               <div className="">
                 <p className="font-bold text-3xl lg:text-5xl text-white">
@@ -32,7 +32,7 @@ export const SignIn = () => {
           </div>
 
           {/* login right side */}
-          <div className="bg-white md:col-span-6 lg:col-span-5">
+          <div className="bg-white md:col-span-6 lg:col-span-5 rounded-br-[8px] md:rounded-br-[8px] md:rounded-tr-[8px] rounded-bl-[8px] md:rounded-tl-[0px] md:rounded-bl-[0px]">
             <div className="mt-10 text-center">
               <p className="text-3xl font-bold text-blue-800">Sign In</p>
             </div>

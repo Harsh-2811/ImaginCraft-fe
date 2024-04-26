@@ -7,7 +7,13 @@ import robotImage from '../assets/robotImg.png'
 import playgroundRouteIcon from '../assets/playgroundRouteIcon.svg'
 import Footer from '../components/Footer'
 import doubleTickIcon from '../assets/doubleTickIcon.svg'
+import supportIcon from '../assets/excelletSupportIcon.svg'
+import brainIcon from '../assets/brain.svg'
+import diamondIcon from '../assets/diamond.svg'
+import customizeIcon from '../assets/customize.svg'
 import MovingText from "../components/MovingText"
+import CircularText from "../components/CircularText"
+import SwiperSlider from '../components/SwiperSlider'
 
 const Home = () => {
   return (
@@ -38,22 +44,26 @@ const Home = () => {
             </div>
             <div>
               <a className="cursor-pointer" href="/playground">
-                <img className="mt-5" src={playgroundRouteIcon} />
+                <CircularText />
               </a>
             </div>
           </div>
         </div>
       </div>
+
+      <div>
+        <SwiperSlider />
+      </div>
       <div className="text-center ">
-        <button className="border border-[#0081A8] text-[#0081A8] text-[13px] rounded-[5px] py-2 px-3 mb-3 uppercase">
+        <button className="border border-[#0081A8] text-[#0081A8] text-[13px] font-semibold rounded-[5px] py-2 px-3 mb-3 uppercase">
           huge collection
         </button>
         <h2 className="text-[#2F2F2F] text-[40px] text-center font-bold mb-10 leading-[50px]">
           Generate all AI image for <br></br> your working
         </h2>
-      </div>
 
-      <div className="grid grid-cols-4"></div>
+
+      </div>
 
       <div className="grid gap-12 md:grid-cols-2 text-[#2F2F2F]">
         <div className="relative ">
@@ -141,13 +151,50 @@ const Home = () => {
 
 
 
-      <div className='grid md:grid-cols-4'>
-        <div className=''></div>
+      <div className='grid md:grid-cols-4 text-white '>
+        <div className='h-[90vh] bg-[#00477A] relative'>
+          <div className='p-6 h-full flex flex-col justify-between cardContent'>
+            <div><img src={supportIcon} className='h-[60px] w-[60px]' /> </div>
+            <div className='bottom-6 cardTextContent'>
+              <h3 className='font-bold text-[24px]'>Excellent support</h3>
+              <p className='text-[16px] duration-700'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            </div>
+          </div>
+
+        </div>
+        <div className='h-[90vh] bg-[#0081A8] relative cardContent'>
+          <div className='p-6 p-6 h-full flex flex-col justify-between cardContent'>
+            <div><img src={brainIcon} className='h-[60px] w-[60px]' /> </div>
+            <div className='cardTextContent bottom-6'>
+              <h3 className='font-bold text-[24px]'>Speed & Efficiency</h3>
+              <p className='text-[16px]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            </div>
+          </div>
+        </div>
+        <div className='h-[90vh] bg-[#00477A] relative cardContent'>
+          <div className='p-6 p-6 h-full flex flex-col justify-between cardContent'>
+            <div><img src={diamondIcon} className='h-[60px] w-[60px]' /> </div>
+            <div className='cardTextContent bottom-0'>
+              <h3 className='font-bold text-[24px]'>Quality & Realism</h3>
+              <p className='text-[16px]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            </div>
+          </div>
+        </div>
+        <div className='h-[90vh] bg-[#0081A8] relative cardContent'>
+          <div className='p-6 p-6 h-full flex flex-col justify-between cardContent'>
+            <div><img src={customizeIcon} className='h-[60px] w-[60px]' /> </div>
+            <div className='cardTextContent bottom-0'>
+              <h3 className='font-bold text-[24px]'>Customize & Refine</h3>
+              <p className='text-[16px]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            </div>
+          </div>
+        </div>
 
       </div>
 
 
-      <div className="max-w-[1200px] mx-auto">
+
+      <div className="max-w-[1200px] mx-auto mt-[70px]">
         <div className="my-5">
           <div className="flex items-center flex-wrap">
             <div className="flex justify-center items-center w-full md:w-1/2">

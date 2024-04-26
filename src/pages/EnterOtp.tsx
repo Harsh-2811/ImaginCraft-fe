@@ -14,8 +14,8 @@ export const EnterOtp = () => {
             <div className="bg-white w-[204px] px-2 py-3 absolute top-0 left-0 rounded-tl-[5px] rounded-br-[5px] ">
               <img src={appLogo} />
             </div>
-            <img src={bgAuthImage} className="w-full h-full" />
-            <div className="absolute bottom-0 flex flex-col p-4 mt-[500px] lg:p-8">
+            <img src={bgAuthImage} className="w-full h-full max-w-[690px]" />
+            <div className="absolute bottom-0 flex flex-col p-4 lg:p-8">
               <div className="">
                 <p className="font-bold text-3xl lg:text-5xl text-white">
                   Welcome back!
@@ -32,43 +32,43 @@ export const EnterOtp = () => {
           {/* login right side */}
           <div className="bg-white md:col-span-6 lg:col-span-5">
             <div className="mt-10 text-center">
-              <p className="text-3xl font-bold text-blue-800">Enter Otp</p>
+              <p className="text-[34px] font-bold text-blue-800">Forgot password</p>
             </div>
             <div className="mt-2">
               <div className="mt-5">
                 <form>
-                  <div className="flex flex-col">
-                    <label className="ml-16">Email OTP</label>
-                    <div className="flex mt-1 flex-row gap-3 items-center justify-between mx-auto w-full max-w-lg">
-                      <div className="w-26 h-12">
+                  <div className="flex flex-col mt-4">
+                    <label className="px-16 text-[15px]">Email OTP</label>
+                    <div className="flex mt-1 px-16 flex-row gap-[10px] items-center justify-between mx-auto w-full">
+                      <div className="w-26 h-[44px]">
                         <input
-                          className="w-full border-black h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded border text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-blue-700"
+                          className="w-full border-[#ADADAD] h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded border text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-blue-700"
                           type="text"
                         />
                       </div>
-                      <div className="w-26 h-12">
+                      <div className="w-26 h-[44px]">
                         <input
-                          className="w-full border-black h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded border text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-blue-700"
+                          className="w-full border-[#ADADAD] h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded border text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-blue-700"
                           type="text"
                         />
                       </div>
-                      <div className="w-26 h-12">
+                      <div className="w-26 h-[44px]">
                         <input
-                          className="w-full border-black h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded border text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-blue-700"
+                          className="w-full border-[#ADADAD] h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded border text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-blue-700"
                           type="text"
                         />
                       </div>
-                      <div className="w-26 h-12">
+                      <div className="w-26 h-[44px]">
                         <input
-                          className="w-full border-black h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded border text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-blue-700"
+                          className="w-full border-[#ADADAD] h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded border text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-blue-700"
                           type="text"
                         />
                       </div>
                     </div>
-                    <div className="flex flex-row mt-4 items-center justify-between mx-auto w-full max-w-lg">
+                    <div className="flex px-16 flex-row mt-4 items-center justify-between mx-auto w-full">
                       <button
                         type="button"
-                        className="w-full focus:outline-none text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded text-sm px-5 py-2.5  dark:focus:ring-orange-900"
+                        className="w-full focus:outline-none text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-[8px] text-[16px] px-5 py-2.5  dark:focus:ring-orange-900"
                       >
                         Submit
                       </button>
@@ -76,7 +76,7 @@ export const EnterOtp = () => {
                   </div>
                 </form>
               </div>
-              <div className="text-center mt-[26rem]">
+              <div className="text-center">
                 <p className="font-semibold">
                   Back to{' '}
                   <Link to={'/signin'} className="text-orange-400">

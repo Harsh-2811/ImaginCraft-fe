@@ -1,0 +1,21 @@
+.custom-slider {
+    width: 100%;
+    position: relative;
+  }
+  
+  .slide {
+    padding: 20px;
+    background-color: #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .slick-center .slide {
+    transform: scale(1.2);
+    z-index: 2;
+  }
+  
+  .slick-slide:not(.slick-center) .slide {
+    transform: translateY(50px);
+    opacity: 0.8;
+  }
