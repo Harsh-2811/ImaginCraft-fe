@@ -35,9 +35,11 @@ const Home = () => {
                   Create production-quality visual assets for your projects with
                   unprecedented quality, speed, and style-consistency.
                 </p>
-                <div className='mt-5'>
-
-                  <Link to={'/signin'} className="bg-[#F16E22] text-white px-3 rounded-md py-2">
+                <div className="mt-5">
+                  <Link
+                    to={'/signin'}
+                    className="bg-[#F16E22] text-white px-3 rounded-md py-2"
+                  >
                     Log in or sign up
                   </Link>
                 </div>

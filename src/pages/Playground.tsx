@@ -274,7 +274,7 @@ const Playground = () => {
                 Additional Accessories
               </h1>
               <div className="mt-5 shadow-shadow-color bg-white rounded-[8px] shadow  w-[100%]">
-                <div className='p-[15px]'>
+                <div className="p-[15px]">
                   <div className="grid md:grid-cols-2 gap-[25px] p-3">
                     <div>
                       <label className="text-[15px] mb-2">
@@ -300,7 +300,9 @@ const Playground = () => {
                       </select>{' '}
                     </div>
                     <div>
-                      <label className="text-[15px]">Want to include text?</label>
+                      <label className="text-[15px]">
+                        Want to include text?
+                      </label>
 
                       <div className="flex items-center">
                         <label className="radio-button-container mt-2 text-[15px] text-black font-semibold mr-3">
@@ -356,29 +358,29 @@ const Playground = () => {
                   </button>
                 </div>
 
-                <div className='bg-[#00AEB833] h-[49px] rounded-bl-[8px] rounded-br-[8px] px-[15px] flex items-center justify-between'>
-                  <div className='flex items-center'>
-                    <img src={Diamond_Icon} className='mr-3' />
-                    <p className='font-semibold text-[14px]'>Total Credits you have: <span className='font-extrabold text-[#F16E22]'>500</span></p>
+                <div className="bg-[#00AEB833] h-[49px] rounded-bl-[8px] rounded-br-[8px] px-[15px] flex items-center justify-between">
+                  <div className="flex items-center">
+                    <img src={Diamond_Icon} className="mr-3" />
+                    <p className="font-semibold text-[14px]">
+                      Total Credits you have:{' '}
+                      <span className="font-extrabold text-[#F16E22]">500</span>
+                    </p>
                   </div>
                   <div>
-                    <p className='font-semibold text-[14px]'>Total Credits you have: <span className='font-extrabold text-[#F16E22]'>500</span></p>
+                    <p className="font-semibold text-[14px]">
+                      Total Credits you have:{' '}
+                      <span className="font-extrabold text-[#F16E22]">500</span>
+                    </p>
                   </div>
                 </div>
-
-
               </div>
-
             </div>
           </>
         )
-        break;
+        break
 
-
-        case 3 :
-          return(
-            <h1>hello</h1>
-          )
+      case 3:
+        return <h1>hello</h1>
       default:
         break
     }

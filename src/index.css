@@ -85,10 +85,9 @@
   transform-origin: 0 75px;
 }
 
-
 /* blog css  */
-.blog_card:hover{
-border:1px solid rgba(241, 110, 34, 1);
-transition: all 1s;
-/* padding:10px */
+.blog_card:hover {
+  border: 1px solid rgba(241, 110, 34, 1);
+  transition: all 1s;
+  /* padding:10px */
 }
