@@ -12,7 +12,6 @@ import diamondIcon from '../assets/diamond.svg'
 import customizeIcon from '../assets/customize.svg'
 import MovingText from '../components/MovingText'
 import CircularText from '../components/CircularText'
-import SwiperSlider from '../components/SwiperSlider'
 import SlickCarousel from '../components/SlickCarousel'
 
 const Home = () => {
@@ -41,7 +40,7 @@ const Home = () => {
                 </button>
               </div>
             </div>
-            <div className='w-full md:w-auto mx-auto mt-[50px] md:mt-[0px]'>
+            <div className="w-full md:w-auto mx-auto mt-[50px] md:mt-[0px]">
               <a className="cursor-pointer" href="/playground">
                 <CircularText />
               </a>
@@ -50,10 +49,8 @@ const Home = () => {
         </div>
       </div>
 
-<SlickCarousel />
-      {/* <div>
-        <SwiperSlider />
-      </div> */}
+      <SlickCarousel />
+
       <div className="text-center ">
         <button className="border border-[#0081A8] text-[#0081A8] text-[13px] font-semibold rounded-[5px] py-2 px-3 mb-3 uppercase">
           huge collection
