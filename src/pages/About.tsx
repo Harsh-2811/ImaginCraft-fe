@@ -48,7 +48,7 @@ const About = () => {
               </div>
             </div>
 
-            <button className="bg-[#F16E22] mt-5 text-white px-3 rounded-md py-2">
+            <button className="bg-[#F16E22] cursor-pointer mt-5 text-white px-3 rounded-md py-2">
               Get Started
             </button>
           </div>

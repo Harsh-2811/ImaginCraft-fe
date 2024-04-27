@@ -9,6 +9,7 @@ import { EnterOtp } from './pages/EnterOtp'
 import { NewPassword } from './pages/NewPassword'
 import { NotFound } from './pages/NotFound'
 import About from './pages/About'
+import ContactUs from './pages/ContactUs'
 
 export const router = createBrowserRouter(
   [
@@ -30,6 +31,11 @@ export const router = createBrowserRouter(
           path: '/playground',
           index: true,
           element: <Playground />,
+        },
+        {
+          path: '/contact-us',
+          index: true,
+          element: <ContactUs />,
         },
       ],
     },
@@ -67,6 +73,10 @@ export const router = createBrowserRouter(
     {
       path: '/about-us',
       element: <About />,
+    },
+    {
+      path: '/contact-us',
+      element: <ContactUs />,
     },
     {
       path: '*',

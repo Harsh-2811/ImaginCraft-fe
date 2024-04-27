@@ -13,6 +13,7 @@ import customizeIcon from '../assets/customize.svg'
 import MovingText from '../components/MovingText'
 import CircularText from '../components/CircularText'
 import SlickCarousel from '../components/SlickCarousel'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -27,20 +28,22 @@ const Home = () => {
                   Generate <span className="text-[#2F2F2F]">image </span>{' '}
                 </h1>
                 <h1 className="text-[72px] font-semibold text-[#F16E22] flex flex-wrap">
-                  {' '}
-                  <span className="text-[#2F2F2F]">with</span>{' '}
+                  <span className="text-[#2F2F2F]">with</span>
                   <img className="h-[88px] mt-[18px] ms-3" src={logoText} />
                 </h1>
                 <p className="text-[#565656] text-xl">
                   Create production-quality visual assets for your projects with
                   unprecedented quality, speed, and style-consistency.
                 </p>
-                <button className="bg-[#F16E22] mt-5 text-white px-3 rounded-md py-2">
-                  Log in or sign up
-                </button>
+                <div className='mt-5'>
+
+                  <Link to={'/signin'} className="bg-[#F16E22] text-white px-3 rounded-md py-2">
+                    Log in or sign up
+                  </Link>
+                </div>
               </div>
             </div>
-            <div className="w-full md:w-auto mx-auto mt-[50px] md:mt-[0px]">
+            <div className="w-full flex justify-center md:w-auto mx-auto mt-[50px] md:mt-[0px]">
               <a className="cursor-pointer" href="/playground">
                 <CircularText />
               </a>
@@ -161,7 +164,7 @@ const Home = () => {
           </div>
         </div>
         <div className="h-[90vh] bg-[#0081A8] relative cardContent">
-          <div className="p-6 p-6 h-full flex flex-col justify-between cardContent">
+          <div className="p-6 h-full flex flex-col justify-between cardContent">
             <div>
               <img src={brainIcon} className="h-[60px] w-[60px]" />{' '}
             </div>
@@ -176,7 +179,7 @@ const Home = () => {
           </div>
         </div>
         <div className="h-[90vh] bg-[#00477A] relative cardContent">
-          <div className="p-6 p-6 h-full flex flex-col justify-between cardContent">
+          <div className="p-6 h-full flex flex-col justify-between cardContent">
             <div>
               <img src={diamondIcon} className="h-[60px] w-[60px]" />{' '}
             </div>
@@ -191,7 +194,7 @@ const Home = () => {
           </div>
         </div>
         <div className="h-[90vh] bg-[#0081A8] relative cardContent">
-          <div className="p-6 p-6 h-full flex flex-col justify-between cardContent">
+          <div className="p-6 h-full flex flex-col justify-between cardContent">
             <div>
               <img src={customizeIcon} className="h-[60px] w-[60px]" />{' '}
             </div>
@@ -304,7 +307,7 @@ const Home = () => {
           </div>
 
           <div className="blogs_container grid md:grid-cols-2 gap-4 text-[#0B2529] mt-10">
-            <div className="blog_card border rounded-xl p-5 flex w-full">
+            <div className="blog_card border rounded-xl from-slate-600  p-5 flex w-full">
               <div className="flex" style={{ objectFit: 'contain' }}>
                 <img
                   className="w-[240px] h-[240px] rounded-lg max-w-fit"

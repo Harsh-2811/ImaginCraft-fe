@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import nextIcon from '../assets/next.svg'
+import Diamond_Icon from '../assets/blue_diamond_icon.svg'
 import CustomDropdown from '../components/CustomDropdown'
 
 const Playground = () => {
@@ -143,7 +144,7 @@ const Playground = () => {
               <h1 className="text-[40px] font-bold text-center">
                 Select a Category
               </h1>
-              <div className="mt-5 shadow-shadow-color bg-white rounded-[8px] h-[calc(100%_-_115px)] overflow-y-auto shadow p-7 w-[100%]">
+              <div className="mt-5 shadow-shadow-color bg-white rounded-[8px] max-h-[calc(100%_-_115px)] overflow-y-auto shadow p-7 w-[100%]">
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-[20px]">
                   <div className="relative aspect-square">
                     <img
@@ -272,90 +273,112 @@ const Playground = () => {
               <h1 className="text-[40px] font-bold text-center">
                 Additional Accessories
               </h1>
-              <div className="mt-5 shadow-shadow-color bg-white rounded-[8px] shadow p-7 w-[100%]">
-                <div className="grid md:grid-cols-2 gap-3 p-3">
-                  <div>
-                    <label className="text-[15px] mb-2">
-                      Emotion Selection
-                    </label>
-                    {/* <CustomDropdown /> */}
-                    <div className="w-full">
+              <div className="mt-5 shadow-shadow-color bg-white rounded-[8px] shadow  w-[100%]">
+                <div className='p-[15px]'>
+                  <div className="grid md:grid-cols-2 gap-[25px] p-3">
+                    <div>
+                      <label className="text-[15px] mb-2">
+                        Emotion Selection
+                      </label>
+                      {/* <CustomDropdown /> */}
+                      <div className="w-full">
+                        <select className="w-full border rounded-[5px] h-[45px] border-[#ddd]">
+                          <option>select</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div>
+                      <label className="text-[15px]">Select Category</label>
                       <select className="w-full border rounded-[5px] h-[45px] border-[#ddd]">
                         <option>select</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
-                      </select>
+                      </select>{' '}
+                    </div>
+                    <div>
+                      <label className="text-[15px]">Want to include text?</label>
+
+                      <div className="flex items-center">
+                        <label className="radio-button-container mt-2 text-[15px] text-black font-semibold mr-3">
+                          Yes
+                          <input type="radio" name="radio" />
+                          <span className="checkmark"></span>
+                        </label>
+                        <label className="radio-button-container mt-2 text-[15px] text-black font-semibold">
+                          No
+                          <input type="radio" name="radio" />
+                          <span className="checkmark"></span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="text-[15px]">
+                        Want to remove background?
+                      </label>
+
+                      <div className="flex items-center">
+                        <label className="radio-button-container mt-2 text-[15px] text-black font-semibold mr-3">
+                          Yes
+                          <input type="radio" name="radio" />
+                          <span className="checkmark"></span>
+                        </label>
+                        <label className="radio-button-container mt-2 text-[15px] text-black font-semibold">
+                          No
+                          <input type="radio" name="radio" />
+                          <span className="checkmark"></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div className="flex flex-col">
+                      <label className="text-[15px]">Add text here</label>
+                      <input
+                        className="border h-[44px  ] text-[16px] w-100 rounded-sm px-3 mt-2 py-1"
+                        type="text"
+                        placeholder="Type here..."
+                      />
+                    </div>
+                    <div>
+                      <label className="text-[15px]">Select Accessories</label>
+                      <CustomDropdown />
                     </div>
                   </div>
-                  <div>
-                    <label className="text-[15px]">Select Category</label>
-                    <select className="w-full border rounded-[5px] h-[45px] border-[#ddd]">
-                      <option>select</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>{' '}
-                  </div>
-                  <div>
-                    <label className="text-[15px]">Want to include text?</label>
 
-                    <div className="flex items-center">
-                      <label className="radio-button-container mt-2 text-[15px] text-black font-semibold mr-3">
-                        Yes
-                        <input type="radio" name="radio" />
-                        <span className="checkmark"></span>
-                      </label>
-                      <label className="radio-button-container mt-2 text-[15px] text-black font-semibold">
-                        No
-                        <input type="radio" name="radio" />
-                        <span className="checkmark"></span>
-                      </label>
-                    </div>
-                  </div>
+                  <button
+                    onClick={() => setActiveTab(3)}
+                    className="bg-[#F16E22] w-max mx-auto text-[15px] text-white px-3 rounded-md flex items-center mt-5 py-2"
+                  >
+                    Generate image <img className="ms-1" src={nextIcon} />
+                  </button>
+                </div>
 
-                  <div>
-                    <label className="text-[15px]">
-                      Want to remove background?
-                    </label>
-
-                    <div className="flex items-center">
-                      <label className="radio-button-container mt-2 text-[15px] text-black font-semibold mr-3">
-                        Yes
-                        <input type="radio" name="radio" />
-                        <span className="checkmark"></span>
-                      </label>
-                      <label className="radio-button-container mt-2 text-[15px] text-black font-semibold">
-                        No
-                        <input type="radio" name="radio" />
-                        <span className="checkmark"></span>
-                      </label>
-                    </div>
-                  </div>
-                  <div className="flex flex-col">
-                    <label className="text-[15px]">Add text here</label>
-                    <input
-                      className="border h-[44px  ] text-[16px] w-100 rounded-sm px-3 mt-2 py-1"
-                      type="text"
-                      placeholder="Type here..."
-                    />
+                <div className='bg-[#00AEB833] h-[49px] rounded-bl-[8px] rounded-br-[8px] px-[15px] flex items-center justify-between'>
+                  <div className='flex items-center'>
+                    <img src={Diamond_Icon} className='mr-3' />
+                    <p className='font-semibold text-[14px]'>Total Credits you have: <span className='font-extrabold text-[#F16E22]'>500</span></p>
                   </div>
                   <div>
-                    <label className="text-[15px]">Select Accessories</label>
-                    <CustomDropdown />
+                    <p className='font-semibold text-[14px]'>Total Credits you have: <span className='font-extrabold text-[#F16E22]'>500</span></p>
                   </div>
                 </div>
-                <button
-                  onClick={() => setActiveTab(1)}
-                  className="bg-[#F16E22] w-max mx-auto text-[15px] text-white px-3 rounded-md flex items-center mt-5 py-2"
-                >
-                  Generate image <img className="ms-1" src={nextIcon} />
-                </button>
+
+
               </div>
+
             </div>
           </>
         )
-        break
+        break;
+
+
+        case 3 :
+          return(
+            <h1>hello</h1>
+          )
       default:
         break
     }

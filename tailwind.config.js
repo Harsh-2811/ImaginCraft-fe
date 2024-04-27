@@ -11,6 +11,7 @@ export default {
         'light-orange': 'rgba(241, 110, 34, 0.05)',
         'shadow-color': 'rgba(0, 0, 0, 0.06)',
         'blue-bg': 'rgba(0, 71, 122, 1)',
+        'light-sky-bg': 'rgba(0, 174, 184, 0.1)',
       },
     },
   },
