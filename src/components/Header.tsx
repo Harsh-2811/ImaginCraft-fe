@@ -45,7 +45,7 @@ export const Header: React.FC = () => {
     {
       link: () => (
         <>
-          <button className="bg-[#F16E22] text-white px-3 rounded-md py-2">
+          <button className="bg-[#F16E22] text-white px-3 max-w-[157px] rounded-md py-2">
             Log in or sign up
           </button>
         </>

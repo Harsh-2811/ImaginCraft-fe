@@ -275,13 +275,25 @@ const Playground = () => {
               <div className="mt-5 shadow-shadow-color bg-white rounded-[8px] shadow p-7 w-[100%]">
                 <div className="grid md:grid-cols-2 gap-3 p-3">
                   <div>
-                    <label className="text-[15px]">Emotion Selection</label>
-                    <CustomDropdown />
+                    <label className="text-[15px] mb-2">Emotion Selection</label>
+                    {/* <CustomDropdown /> */}
+                    <div className='w-full'>
+                      <select  className='w-full border rounded-[5px] h-[45px] border-[#ddd]'>
+                        <option>select</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                      </select>
+                    </div>
                   </div>
                   <div>
                     <label className="text-[15px]">Select Category</label>
-                    <CustomDropdown />
-                  </div>
+                    <select  className='w-full border rounded-[5px] h-[45px] border-[#ddd]'>
+                        <option>select</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                      </select>                  </div>
                   <div>
                     <label className="text-[15px]">Want to include text?</label>
 
@@ -324,6 +336,10 @@ const Playground = () => {
                       type="text"
                       placeholder="Type here..."
                     />
+                  </div>
+                  <div>
+                    <label className="text-[15px]">Select Accessories</label>
+                    <CustomDropdown />
                   </div>
                 </div>
                 <button

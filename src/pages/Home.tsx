@@ -13,14 +13,15 @@ import customizeIcon from '../assets/customize.svg'
 import MovingText from '../components/MovingText'
 import CircularText from '../components/CircularText'
 import SwiperSlider from '../components/SwiperSlider'
+import SlickCarousel from '../components/SlickCarousel'
 
 const Home = () => {
   return (
     <>
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-[1220px] px-[20px] mx-auto">
         <div className="my-14">
-          <div className="flex justify-between">
-            <div className="flex w-10/12">
+          <div className="flex justify-between flex-wrap">
+            <div className="flex w-full lg:w-10/12">
               <img className="h-[190px]" src={robotImage} />
               <div>
                 <h1 className="text-[72px] font-semibold text-[#F16E22] leading-[96px]">
@@ -40,7 +41,7 @@ const Home = () => {
                 </button>
               </div>
             </div>
-            <div>
+            <div className='w-full md:w-auto mx-auto mt-[50px] md:mt-[0px]'>
               <a className="cursor-pointer" href="/playground">
                 <CircularText />
               </a>
@@ -49,9 +50,10 @@ const Home = () => {
         </div>
       </div>
 
-      <div>
+<SlickCarousel />
+      {/* <div>
         <SwiperSlider />
-      </div>
+      </div> */}
       <div className="text-center ">
         <button className="border border-[#0081A8] text-[#0081A8] text-[13px] font-semibold rounded-[5px] py-2 px-3 mb-3 uppercase">
           huge collection
