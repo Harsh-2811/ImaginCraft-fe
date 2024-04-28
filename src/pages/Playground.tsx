@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import nextIcon from '../assets/next.svg'
 import Diamond_Icon from '../assets/blue_diamond_icon.svg'
+import DOWNLOAD_ICON from '../assets/downloadIcon.svg'
 import CustomDropdown from '../components/CustomDropdown'
+import PlaygroundCarousel from "../components/playgroundCarousel"
 
 const Playground = () => {
-  const [activeTab, setActiveTab] = useState(0)
+  const [activeTab, setActiveTab] = useState(3)
 
   const activeContent = () => {
     switch (activeTab) {
@@ -380,7 +382,55 @@ const Playground = () => {
         break
 
       case 3:
-        return <h1>hello</h1>
+        return (
+          <>
+            <div className='flex justify-center max-w-[1150px] px-[10px] md:max-h-full md:pt-[0px] mx-auto items-center h-full flex-col'>
+              <div className='max-w-[920px] px-[20px] max-h-[calc(100vh_-_149px)] overflow-y-auto'>
+                {/* <div className='grid grid-cols-2 gap-[20px]'> */}
+                <div className='lg:flex flex-row'>
+                  <div className='w-full max-w-[500px]'>
+                    <PlaygroundCarousel />
+                  </div>
+                  <div className='max-w-[377px] w-full ms-[10px]'>
+                    <div className='bg-white rounded-[8px] rounded-b-none p-[25px] w-full'>
+                      <div className='flex items-center text-[16px] mb-3'>
+                        <span className='text-[#00477A] font-extrabold'>Selected Theme: </span>
+                        <span className='text-black'>Digital Watercolor</span>
+                      </div>
+                      <div className='flex items-center text-[16px] border-2 pt-3 border-x-0 border-b-0'>
+                        <span className='text-[#00477A] font-extrabold'>Selected Theme: </span>
+                        <span className='text-black'>Digital Watercolor</span>
+                      </div>
+                    </div>
+                    <div className="bg-[#00AEB833] rounded-bl-[8px] rounded-br-[8px] px-[25px] p-3">
+                      <div className="flex items-center">
+                        <img src={Diamond_Icon} className="mr-3" />
+                        <p className="font-semibold text-[14px]">
+                          Total Credits you have:{' '}
+                          <span className="font-extrabold text-[#F16E22]">500</span>
+                        </p>
+                      </div>
+                      <div className="flex items-center mt-3">
+                        <img src={Diamond_Icon} className="mr-3" />
+                        <p className="font-semibold text-[14px]">
+                          Total Credits you have:{' '}
+                          <span className="font-extrabold text-[#F16E22]">500</span>
+                        </p>
+                      </div>
+
+                    </div>
+                    <button
+                      onClick={() => setActiveTab(0)}
+                      className="bg-[#F16E22] mx-auto text-[15px] text-white px-3 rounded-md flex items-center mt-8 py-2"
+                    >
+                      <img className="me-2" src={DOWNLOAD_ICON} /> Download All
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
+        )
       default:
         break
     }
@@ -389,7 +439,7 @@ const Playground = () => {
   return (
     <>
       <div className="h-full w-full">
-        <div className="bg-auth-bg bg-no-repeat h-[calc(100vh_-_90px)] bg-[length:100%_100%]  bg-center">
+        <div className="bg-auth-bg bg-no-repeat h-[calc(100vh_-_147px)] bg-[length:100%_100%]  bg-center">
           {activeContent()}
           <footer className="fixed bottom-0 w-full bg-[#00477A] px-[20px]">
             <div className="max-w-[1220px] flex items-center justify-between mx-auto text-white py-4">
@@ -444,7 +494,7 @@ const Playground = () => {
 
 /* On mouse-over, add a grey background color */
 .radio-button-container:hover input ~ .checkmark {
-  border-color: rgba(0,0,0,0.5);
+  border-color: #F16E22;
 }
 
 /* When the radio button is checked */
@@ -452,7 +502,6 @@ const Playground = () => {
   background-color: rgba(0,0,0,0);
   border-color: #F16E22;
 }
-
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {

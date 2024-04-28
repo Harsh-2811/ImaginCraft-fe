@@ -33,8 +33,8 @@ const ContactUs = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-[30px] mt-[50px]">
-            <div className="bg-[#FEF8F4] text-center rounded-[8px] p-[20px]">
-              <div className="bg-[#F16E22] h-[70px] w-[70px] rounded-full flex justify-center items-center mx-auto">
+            <div className="group bg-[#FEF8F4] hover:bg-light-sky-bg text-center rounded-[8px] p-[20px]">
+              <div className=" bg-[#F16E22] group-hover:bg-[#00AEB8] h-[70px] w-[70px] rounded-full flex justify-center items-center mx-auto">
                 <img src={LOCATION_ICON} />
               </div>
               <h3 className="text-[20px] text-[#0B1629] font-semibold mt-2">
@@ -48,8 +48,8 @@ const ContactUs = () => {
                 Teteringsedijk 55, 4817 MA Breda
               </p>
             </div>
-            <div className="bg-light-sky-bg text-center rounded-[8px] p-[20px]">
-              <div className="bg-[#00AEB8] h-[70px] w-[70px] rounded-full flex justify-center items-center mx-auto">
+            <div className="group bg-[#FEF8F4] hover:bg-light-sky-bg text-center rounded-[8px] p-[20px]">
+              <div className="bg-[#F16E22] group-hover:bg-[#00AEB8] h-[70px] w-[70px] rounded-full flex justify-center items-center mx-auto">
                 <img src={PHONE_ICON} />
               </div>
               <h3 className="text-[20px] text-[#0B1629] font-semibold mt-2">
@@ -58,8 +58,8 @@ const ContactUs = () => {
               <p className="text-[#454952] text-[15px]">(06)-29202473</p>
               <p className="text-[#454952] text-[15px]">(06)-29202473</p>
             </div>
-            <div className="bg-[#FEF8F4] text-center rounded-[8px] p-[20px]">
-              <div className="bg-[#F16E22] h-[70px] w-[70px] rounded-full flex justify-center items-center mx-auto">
+            <div className="group bg-[#FEF8F4] hover:bg-light-sky-bg text-center rounded-[8px] p-[20px]">
+              <div className="bg-[#F16E22] group-hover:bg-[#00AEB8] h-[70px] w-[70px] rounded-full flex justify-center items-center mx-auto">
                 <img src={EMAIL_ICON} />
               </div>
               <h3 className="text-[20px] text-[#0B1629] font-semibold mt-2">
