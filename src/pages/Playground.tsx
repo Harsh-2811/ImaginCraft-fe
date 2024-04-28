@@ -3,7 +3,7 @@ import nextIcon from '../assets/next.svg'
 import Diamond_Icon from '../assets/blue_diamond_icon.svg'
 import DOWNLOAD_ICON from '../assets/downloadIcon.svg'
 import CustomDropdown from '../components/CustomDropdown'
-import PlaygroundCarousel from "../components/playgroundCarousel"
+import PlaygroundCarousel from '../components/playgroundCarousel'
 
 const Playground = () => {
   const [activeTab, setActiveTab] = useState(3)
@@ -384,22 +384,26 @@ const Playground = () => {
       case 3:
         return (
           <>
-            <div className='flex justify-center max-w-[1150px] px-[10px] md:max-h-full md:pt-[0px] mx-auto items-center h-full flex-col'>
-              <div className='max-w-[920px] px-[20px] max-h-[calc(100vh_-_149px)] overflow-y-auto'>
+            <div className="flex justify-center max-w-[1150px] px-[10px] md:max-h-full md:pt-[0px] mx-auto items-center h-full flex-col">
+              <div className="max-w-[920px] px-[20px] max-h-[calc(100vh_-_149px)] overflow-y-auto">
                 {/* <div className='grid grid-cols-2 gap-[20px]'> */}
-                <div className='lg:flex flex-row'>
-                  <div className='w-full max-w-[500px]'>
+                <div className="lg:flex flex-row">
+                  <div className="w-full max-w-[500px]">
                     <PlaygroundCarousel />
                   </div>
-                  <div className='max-w-[377px] w-full ms-[10px]'>
-                    <div className='bg-white rounded-[8px] rounded-b-none p-[25px] w-full'>
-                      <div className='flex items-center text-[16px] mb-3'>
-                        <span className='text-[#00477A] font-extrabold'>Selected Theme: </span>
-                        <span className='text-black'>Digital Watercolor</span>
+                  <div className="max-w-[377px] w-full ms-[10px]">
+                    <div className="bg-white rounded-[8px] rounded-b-none p-[25px] w-full">
+                      <div className="flex items-center text-[16px] mb-3">
+                        <span className="text-[#00477A] font-extrabold">
+                          Selected Theme:{' '}
+                        </span>
+                        <span className="text-black">Digital Watercolor</span>
                       </div>
-                      <div className='flex items-center text-[16px] border-2 pt-3 border-x-0 border-b-0'>
-                        <span className='text-[#00477A] font-extrabold'>Selected Theme: </span>
-                        <span className='text-black'>Digital Watercolor</span>
+                      <div className="flex items-center text-[16px] border-2 pt-3 border-x-0 border-b-0">
+                        <span className="text-[#00477A] font-extrabold">
+                          Selected Theme:{' '}
+                        </span>
+                        <span className="text-black">Digital Watercolor</span>
                       </div>
                     </div>
                     <div className="bg-[#00AEB833] rounded-bl-[8px] rounded-br-[8px] px-[25px] p-3">
@@ -407,17 +411,20 @@ const Playground = () => {
                         <img src={Diamond_Icon} className="mr-3" />
                         <p className="font-semibold text-[14px]">
                           Total Credits you have:{' '}
-                          <span className="font-extrabold text-[#F16E22]">500</span>
+                          <span className="font-extrabold text-[#F16E22]">
+                            500
+                          </span>
                         </p>
                       </div>
                       <div className="flex items-center mt-3">
                         <img src={Diamond_Icon} className="mr-3" />
                         <p className="font-semibold text-[14px]">
                           Total Credits you have:{' '}
-                          <span className="font-extrabold text-[#F16E22]">500</span>
+                          <span className="font-extrabold text-[#F16E22]">
+                            500
+                          </span>
                         </p>
                       </div>
-
                     </div>
                     <button
                       onClick={() => setActiveTab(0)}
