@@ -29,7 +29,10 @@ const Home = () => {
                 </h1>
                 <h1 className="md:text-[72px] text-[35px] font-semibold text-[#F16E22] flex flex-wrap">
                   <span className="text-[#2F2F2F]">with</span>
-                  <img className="md:h-[88px] h-[49px] min-w-[290px]  mt-[5px] md:mt-[18px] ms-3" src={logoText} />
+                  <img
+                    className="md:h-[88px] h-[49px] min-w-[290px]  mt-[5px] md:mt-[18px] ms-3"
+                    src={logoText}
+                  />
                 </h1>
                 <p className="text-[#565656] text-xl">
                   Create production-quality visual assets for your projects with
