@@ -8,6 +8,7 @@
   height: 408px;
   /* width:314px; */
   margin: 0 auto;
+  object-fit: cover;
 }
 
 .slick-center + .slick-slide {

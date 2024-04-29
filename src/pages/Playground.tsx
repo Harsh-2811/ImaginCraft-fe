@@ -6,7 +6,7 @@ import CustomDropdown from '../components/CustomDropdown'
 import { PlayGroundCarousel } from '../components/PlayGroundCarousel'
 
 const Playground = () => {
-  const [activeTab, setActiveTab] = useState(3)
+  const [activeTab, setActiveTab] = useState(0)
 
   const activeContent = () => {
     switch (activeTab) {
@@ -17,123 +17,141 @@ const Playground = () => {
               <h1 className="text-[40px] font-bold text-center">
                 Select a Theme
               </h1>
-              <div className="mt-5 shadow-shadow-color bg-white rounded-[8px] max-h-[calc(100%_-_115px)] overflow-y-auto shadow p-7 w-[100%]">
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-[20px]">
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
+              <div className="mt-5 shadow-shadow-color bg-white rounded-[8px] max-h-[calc(100%_-_115px)] overflow-y-auto shadow w-[100%]">
+                <div className='p-7'>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-[20px]">
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                  </div>
+
+                  <button
+                    onClick={() => setActiveTab(1)}
+                    className="bg-[#F16E22] mx-auto text-[15px] text-white px-3 rounded-md flex items-center mt-5 py-2"
+                  >
+                    Next <img className="ms-1" src={nextIcon} />
+                  </button>
+                </div>
+                <div className="bg-[#00AEB833] h-[49px] rounded-bl-[8px] rounded-br-[8px] px-[15px] flex items-center justify-between">
+                  <div className="flex items-center">
+                    <img src={Diamond_Icon} className="mr-3" />
+                    <p className="font-semibold text-[14px]">
+                      Total Credits you have:{' '}
+                      <span className="font-extrabold text-[#F16E22]">500</span>
                     </p>
                   </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
+                  <div>
+                    <p className="font-semibold text-[14px]">
+                      Total Credits you have:{' '}
+                      <span className="font-extrabold text-[#F16E22]">500</span>
                     </p>
                   </div>
                 </div>
-                <button
-                  onClick={() => setActiveTab(1)}
-                  className="bg-[#F16E22] mx-auto text-[15px] text-white px-3 rounded-md flex items-center mt-5 py-2"
-                >
-                  Next <img className="ms-1" src={nextIcon} />
-                </button>
               </div>
             </div>
           </>
@@ -146,123 +164,141 @@ const Playground = () => {
               <h1 className="text-[40px] font-bold text-center">
                 Select a Category
               </h1>
-              <div className="mt-5 shadow-shadow-color bg-white rounded-[8px] max-h-[calc(100%_-_115px)] overflow-y-auto shadow p-7 w-[100%]">
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-[20px]">
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
+              <div className="mt-5 shadow-shadow-color bg-white rounded-[8px] max-h-[calc(100%_-_115px)] overflow-y-auto shadow w-[100%]">
+                <div className='p-7'>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-[20px]">
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                    <div className="relative aspect-square">
+                      <img
+                        className="h-full w-full object-cover rounded-[16px]"
+                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
+                      />
+                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                        hello
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => setActiveTab(2)}
+                    className="bg-[#F16E22] mx-auto text-[15px] text-white px-3 rounded-md flex items-center mt-5 py-2"
+                  >
+                    Next <img className="ms-1" src={nextIcon} />
+                  </button>
+                </div>
+
+                <div className="bg-[#00AEB833] h-[49px] rounded-bl-[8px] rounded-br-[8px] px-[15px] flex items-center justify-between">
+                  <div className="flex items-center">
+                    <img src={Diamond_Icon} className="mr-3" />
+                    <p className="font-semibold text-[14px]">
+                      Total Credits you have:{' '}
+                      <span className="font-extrabold text-[#F16E22]">500</span>
                     </p>
                   </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
-                    </p>
-                  </div>
-                  <div className="relative aspect-square">
-                    <img
-                      className="h-full w-full object-cover rounded-[16px]"
-                      src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                    />
-                    <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                      hello
+                  <div>
+                    <p className="font-semibold text-[14px]">
+                      Total Credits you have:{' '}
+                      <span className="font-extrabold text-[#F16E22]">500</span>
                     </p>
                   </div>
                 </div>
-                <button
-                  onClick={() => setActiveTab(2)}
-                  className="bg-[#F16E22] mx-auto text-[15px] text-white px-3 rounded-md flex items-center mt-5 mb-4 py-2"
-                >
-                  Next <img className="ms-1" src={nextIcon} />
-                </button>
               </div>
             </div>
           </>
