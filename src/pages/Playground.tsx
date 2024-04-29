@@ -3,7 +3,7 @@ import nextIcon from '../assets/next.svg'
 import Diamond_Icon from '../assets/blue_diamond_icon.svg'
 import DOWNLOAD_ICON from '../assets/downloadIcon.svg'
 import CustomDropdown from '../components/CustomDropdown'
-import PlaygroundCarousel from '../components/playgroundCarousel'
+import { PlayGroundCarousel } from '../components/PlayGroundCarousel'
 
 const Playground = () => {
   const [activeTab, setActiveTab] = useState(3)
@@ -389,7 +389,7 @@ const Playground = () => {
                 {/* <div className='grid grid-cols-2 gap-[20px]'> */}
                 <div className="lg:flex flex-row">
                   <div className="w-full max-w-[500px]">
-                    <PlaygroundCarousel />
+                    <PlayGroundCarousel />
                   </div>
                   <div className="max-w-[377px] w-full ms-[10px]">
                     <div className="bg-white rounded-[8px] rounded-b-none p-[25px] w-full">

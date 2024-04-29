@@ -32,7 +32,7 @@ function MovingText() {
         </p>
       </div>
 
-      <style jsx>
+      <style>
         {`
           .moveText {
             -webkit-text-stroke: 1px #00aeb8;

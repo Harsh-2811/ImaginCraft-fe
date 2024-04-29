@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
 import Slider from 'react-slick'
 import bgAuthImage from '../assets/authimages.png'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import DOWNLOAD_ICON from '../assets/downloadIcon.svg'
 
-const playgroundCarousel = () => {
-  var settings = {
+export const PlayGroundCarousel = () => {
+  const settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -83,5 +82,3 @@ const playgroundCarousel = () => {
     </>
   )
 }
-
-export default playgroundCarousel

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Slider from 'react-slick'
 import './slickslider.css'
 import bgAuthImage from '../assets/authimages.png'
@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 function CenterMode() {
-  var settings = {
+  const settings = {
     className: 'center',
     centerMode: true,
     infinite: true,
