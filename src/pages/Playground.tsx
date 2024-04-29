@@ -18,7 +18,7 @@ const Playground = () => {
                 Select a Theme
               </h1>
               <div className="mt-5 shadow-shadow-color bg-white rounded-[8px] max-h-[calc(100%_-_115px)] overflow-y-auto shadow w-[100%]">
-                <div className='p-7'>
+                <div className="p-7">
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-[20px]">
                     <div className="relative aspect-square">
                       <img
@@ -165,7 +165,7 @@ const Playground = () => {
                 Select a Category
               </h1>
               <div className="mt-5 shadow-shadow-color bg-white rounded-[8px] max-h-[calc(100%_-_115px)] overflow-y-auto shadow w-[100%]">
-                <div className='p-7'>
+                <div className="p-7">
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-[20px]">
                     <div className="relative aspect-square">
                       <img
