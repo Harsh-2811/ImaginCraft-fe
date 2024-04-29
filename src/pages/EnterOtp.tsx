@@ -78,7 +78,7 @@ export const EnterOtp = () => {
                   </div>
                 </form>
               </div>
-              <div className="text-center">
+              <div className="text-center mt-96">
                 <p className="font-semibold">
                   Back to{' '}
                   <Link to={'/signin'} className="text-orange-400">

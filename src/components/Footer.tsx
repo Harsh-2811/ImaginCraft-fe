@@ -17,7 +17,7 @@ const Footer = () => {
                   into industry.
                 </p>
                 <p className="text-xl pt-3">+31 0 00 00 00 00</p>
-                <div className="mt-4 flex items-center">
+                <div className="mt-4 flex items-center justify-center md:justify-start">
                   <div className="h-[44px] w-[44px] border rounded-full p-1 flex items-center justify-center">
                     <a className="">
                       <img className="h-[20px] w-[20px]" src={facebookIcon} />

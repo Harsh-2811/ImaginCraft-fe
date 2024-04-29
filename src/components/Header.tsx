@@ -9,7 +9,7 @@ export const Header: React.FC = () => {
     {
       link: () => (
         <>
-          <Link to={'/'} className="text-lg">
+          <Link to={'/'} className="md:text-lg">
             Home
           </Link>
         </>
@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
     {
       link: () => (
         <>
-          <Link to={'/about-us'} className="text-lg">
+          <Link to={'/about-us'} className="md:text-lg">
             About Us
           </Link>
         </>
@@ -27,7 +27,7 @@ export const Header: React.FC = () => {
     {
       link: () => (
         <>
-          <Link to={'/contact-us'} className="text-lg">
+          <Link to={'/contact-us'} className="md:text-lg">
             Contact Us
           </Link>
         </>
@@ -36,7 +36,7 @@ export const Header: React.FC = () => {
     {
       link: () => (
         <>
-          <Link to={'/playground'} className="text-lg">
+          <Link to={'/playground'} className="md:text-lg">
             Playground
           </Link>
         </>
@@ -59,12 +59,12 @@ export const Header: React.FC = () => {
     <>
       <div className="h-[90px] w-full border-b-2">
         <div className="flex justify-between flex-row items-center content-center">
-          <div className="h-[56px] w-[309px] p-4 ml-10">
+          <div className="h-[56px] w-[309px] md:p-4 mls-10">
             <a href="/">
               <img src={ImaginCraftLogo} alt="imaginCraft Logo" />
             </a>
           </div>
-          <div className="flex mt-6 gap-6 mr-16 items-center">
+          <div className="flex mt-6 gap-6 mr-16 items-center ">
             {links?.map((link: Links, index: number) => (
               <React.Fragment key={index}>
                 {link?.link('no props')}

@@ -6,7 +6,7 @@ import CustomDropdown from '../components/CustomDropdown'
 import { PlayGroundCarousel } from '../components/PlayGroundCarousel'
 
 const Playground = () => {
-  const [activeTab, setActiveTab] = useState(0)
+  const [activeTab, setActiveTab] = useState(2)
 
   const activeContent = () => {
     switch (activeTab) {
@@ -311,7 +311,7 @@ const Playground = () => {
               <h1 className="text-[40px] font-bold text-center">
                 Additional Accessories
               </h1>
-              <div className="mt-5 shadow-shadow-color bg-white rounded-[8px] shadow  w-[100%]">
+              <div className="mt-5 shadow-shadow-color h-[calc(100vh_-_275px)] overflow-y-auto bg-white rounded-[8px] shadow w-[100%]">
                 <div className="p-[15px]">
                   <div className="grid md:grid-cols-2 gap-[25px] p-3">
                     <div>
@@ -424,10 +424,10 @@ const Playground = () => {
               <div className="max-w-[920px] px-[20px] max-h-[calc(100vh_-_149px)] overflow-y-auto">
                 {/* <div className='grid grid-cols-2 gap-[20px]'> */}
                 <div className="lg:flex flex-row">
-                  <div className="w-full max-w-[500px]">
+                  <div className="w-full  min-w-[200px] max-w-[400px] md:max-w-[500px]">
                     <PlayGroundCarousel />
                   </div>
-                  <div className="max-w-[377px] w-full ms-[10px]">
+                  <div className="lg:max-w-[377px] w-full ms-[10px]">
                     <div className="bg-white rounded-[8px] rounded-b-none p-[25px] w-full">
                       <div className="flex items-center text-[16px] mb-3">
                         <span className="text-[#00477A] font-extrabold">

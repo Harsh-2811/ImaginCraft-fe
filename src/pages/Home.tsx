@@ -22,14 +22,14 @@ const Home = () => {
         <div className="my-14">
           <div className="flex justify-between flex-wrap">
             <div className="flex w-full lg:w-10/12">
-              <img className="h-[190px]" src={robotImage} />
+              <img className="md:h-[190px] h-[100px]" src={robotImage} />
               <div>
-                <h1 className="text-[72px] font-semibold text-[#F16E22] leading-[96px]">
+                <h1 className="md:text-[72px] text-[35px] font-semibold text-[#F16E22] md:leading-[96px]">
                   Generate <span className="text-[#2F2F2F]">image </span>{' '}
                 </h1>
-                <h1 className="text-[72px] font-semibold text-[#F16E22] flex flex-wrap">
+                <h1 className="md:text-[72px] text-[35px] font-semibold text-[#F16E22] flex flex-wrap">
                   <span className="text-[#2F2F2F]">with</span>
-                  <img className="h-[88px] mt-[18px] ms-3" src={logoText} />
+                  <img className="md:h-[88px] h-[49px] min-w-[290px]  mt-[5px] md:mt-[18px] ms-3" src={logoText} />
                 </h1>
                 <p className="text-[#565656] text-xl">
                   Create production-quality visual assets for your projects with

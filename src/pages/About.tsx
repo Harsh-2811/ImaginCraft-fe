@@ -78,7 +78,7 @@ const About = () => {
         </div>
 
         <div className="flex items-end flex-wrap mt-[50px]">
-          <div className="flex-1">
+          <div className="flex-1 hidden lg:block">
             <div className="h-[360px] mb-4">
               <img
                 src={bgAuthImage}
@@ -92,7 +92,7 @@ const About = () => {
               />
             </div>
           </div>
-          <div className="flex-1 px-4 ">
+          <div className="flex-1 px-4 hidden sm:block">
             <div className="h-[360px] mb-4">
               <img
                 src={bgAuthImage}
@@ -106,7 +106,7 @@ const About = () => {
               />
             </div>
           </div>
-          <div className="flex-1">
+          <div className="flex-1 px-4 sm:px-0">
             <div className="h-[360px] mb-4">
               <img
                 src={bgAuthImage}
@@ -120,7 +120,7 @@ const About = () => {
               />
             </div>
           </div>
-          <div className="flex-1 px-4">
+          <div className="flex-1 px-4 hidden sm:block">
             <div className="h-[360px] mb-4">
               <img
                 src={bgAuthImage}
@@ -134,7 +134,7 @@ const About = () => {
               />
             </div>
           </div>
-          <div className="flex-1">
+          <div className="flex-1 hidden lg:block">
             <div className="h-[360px] mb-4">
               <img
                 src={bgAuthImage}
@@ -251,20 +251,26 @@ const About = () => {
             <div className="md:w-1/2 w-full">
               <div className="grid sm:grid-cols-12 sm:grid-rows-8 gap-5">
                 <div className="sm:col-span-1"></div>
-                <div className="col-span-4 row-span-4">
+                {/* <div className="col-span-4 row-span-4">
                   <img
                     className="rounded-[8px]"
                     src="https://s3-alpha-sig.figma.com/img/776f/da1c/fb5b145ed7f3edd720edd3ff25f0ff6d?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NHkfZZIQLvgCLbhMIUZxh2k4xBiytS97zrJXhYW1kgMznO8hF8MkLm-UC57tMoREwEnT-LTJhfJRWsFxScDC4RMZA7yp9tpzAPqyQQI3IrbtnKos6HIjhQ8E1aoUTL4js2CN6d75PBqWrCZqM0Xo20nV-IEqxp1n5OHFrIHtfuRtwo7O3PLaAdKMmZGqyGgL0YcHBtF6QE0rkN0z5ZFl2as9CRw-Zf9ckAfjEJOVBsejKaexkU6zunvqordZno46Y~aml9Urdy8YLD-ScYh4LSC9bM6AfLAbNwPyFDh4lEMQ5DcIcFvc2OwrUHkA4fh~VQyqoVAfbR7obFNOA4FZ1w__"
                   />
+                </div> */}
+                <div className="col-span-4 row-span-4">
+                  <img className="rounded-[8px]" src={bgAuthImage} />
                 </div>
                 <div className="col-span-5 row-span-4">
                   <img className="rounded-[8px]" src={bgAuthImage} />
                 </div>
-                <div className="col-span-6 row-span-4">
+                {/* <div className="col-span-6 row-span-4">
                   <img
                     className="rounded-[8px]"
                     src="https://s3-alpha-sig.figma.com/img/776f/da1c/fb5b145ed7f3edd720edd3ff25f0ff6d?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NHkfZZIQLvgCLbhMIUZxh2k4xBiytS97zrJXhYW1kgMznO8hF8MkLm-UC57tMoREwEnT-LTJhfJRWsFxScDC4RMZA7yp9tpzAPqyQQI3IrbtnKos6HIjhQ8E1aoUTL4js2CN6d75PBqWrCZqM0Xo20nV-IEqxp1n5OHFrIHtfuRtwo7O3PLaAdKMmZGqyGgL0YcHBtF6QE0rkN0z5ZFl2as9CRw-Zf9ckAfjEJOVBsejKaexkU6zunvqordZno46Y~aml9Urdy8YLD-ScYh4LSC9bM6AfLAbNwPyFDh4lEMQ5DcIcFvc2OwrUHkA4fh~VQyqoVAfbR7obFNOA4FZ1w__"
                   />
+                </div> */}
+                <div className="col-span-6 row-span-4">
+                  <img className="rounded-[8px]" src={bgAuthImage} />
                 </div>
                 <div className="col-span-4 row-span-4">
                   <img className="rounded-[8px]" src={bgAuthImage} />
@@ -275,7 +281,7 @@ const About = () => {
                                 <div>
                                     <img className='rounded-[8px] h-[269px] w-[228px]' src={bgAuthImage} />
                                 </div>
-                                <div>
+                        \        <div>
                                     <img className='rounded-[8px] h-[202px] w-[279px]' src={bgAuthImage} />
                                 </div>
                                 <div>
