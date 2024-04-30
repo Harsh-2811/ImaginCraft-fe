@@ -6,7 +6,7 @@ import CustomDropdown from '../components/CustomDropdown'
 import { PlayGroundCarousel } from '../components/PlayGroundCarousel'
 
 const Playground = () => {
-  const [activeTab, setActiveTab] = useState(2)
+  const [activeTab, setActiveTab] = useState(0)
 
   const activeContent = () => {
     switch (activeTab) {
