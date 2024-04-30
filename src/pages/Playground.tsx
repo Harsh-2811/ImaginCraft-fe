@@ -4,9 +4,85 @@ import Diamond_Icon from '../assets/blue_diamond_icon.svg'
 import DOWNLOAD_ICON from '../assets/downloadIcon.svg'
 import CustomDropdown from '../components/CustomDropdown'
 import { PlayGroundCarousel } from '../components/PlayGroundCarousel'
+import ORANGE_TICK_ICON from "../assets/orangeTicckIcon.svg"
+
+const themeData = [
+  {
+    id: 1,
+    img: "https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg",
+    content: "Geomatric logo"
+  },
+  {
+    id: 2,
+    img: "https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg",
+    content: "Geomatric logo"
+  },
+  {
+    id: 3,
+    img: "https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg",
+    content: "Geomatric logo"
+  },
+  {
+    id: 4,
+    img: "https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg",
+    content: "Geomatric logo"
+  },
+  {
+    id: 5,
+    img: "https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg",
+    content: "Geomatric logo"
+  },
+  {
+    id: 6,
+    img: "https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg",
+    content: "Geomatric logo"
+  },
+  {
+    id: 7,
+    img: "https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg",
+    content: "Geomatric logo"
+  },
+  {
+    id: 8,
+    img: "https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg",
+    content: "Geomatric logo"
+  },
+  {
+    id: 9,
+    img: "https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg",
+    content: "Geomatric logo"
+  },
+  {
+    id: 10,
+    img: "https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg",
+    content: "Geomatric logo"
+  },
+  {
+    id: 11,
+    img: "https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg",
+    content: "Geomatric logo"
+  },
+  {
+    id: 12,
+    img: "https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg",
+    content: "Geomatric logo"
+  },
+]
 
 const Playground = () => {
   const [activeTab, setActiveTab] = useState(0)
+  const [selectedThemeItemId, setSelectedThemeItemId] = useState(null);
+  const [selectedCategoryItemId, setSelectedCategoryItemId] = useState(null);
+
+
+
+  const toggleThemeSelect = (id) => {
+    setSelectedThemeItemId(id === selectedThemeItemId ? null : id);
+  };
+  const toggleCategorySelect = (id) => {
+    setSelectedCategoryItemId(id === selectedCategoryItemId ? null : id);
+  };
+
 
   const activeContent = () => {
     switch (activeTab) {
@@ -20,7 +96,28 @@ const Playground = () => {
               <div className="mt-5 shadow-shadow-color bg-white rounded-[8px] max-h-[calc(100%_-_115px)] overflow-y-auto shadow w-[100%]">
                 <div className="p-7">
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-[20px]">
-                    <div className="relative aspect-square">
+                    {
+                      themeData.map((data, index) => {
+                        return (
+                          <div className={`relative aspect-square`} key={index} onClick={() => toggleThemeSelect(data.id)}>
+                            {data.id === selectedThemeItemId ?
+                              <div className='flex items-center justify-center bg-white rounded-full absolute top-2 right-2 h-[27px] w-[27px]'>
+                                <img src={ORANGE_TICK_ICON} alt='icon' />
+                              </div>
+
+                              : ''}
+                            <img
+                              className="h-full w-full object-cover rounded-[16px]"
+                              src={data.img}
+                            />
+                            <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                              {data.content}
+                            </p>
+                          </div>
+                        )
+                      })
+                    }
+                    {/* <div className="relative aspect-square">
                       <img
                         className="h-full w-full object-cover rounded-[16px]"
                         src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
@@ -28,111 +125,14 @@ const Playground = () => {
                       <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
                         hello
                       </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
+                    </div> */}
+
                   </div>
 
                   <button
                     onClick={() => setActiveTab(1)}
-                    className="bg-[#F16E22] mx-auto text-[15px] text-white px-3 rounded-md flex items-center mt-5 py-2"
+                    disabled={selectedThemeItemId == null}
+                    className="bg-[#F16E22] disabled:bg-[#ffaa79] mx-auto text-[15px] text-white px-3 rounded-md flex items-center mt-5 py-2"
                   >
                     Next <img className="ms-1" src={nextIcon} />
                   </button>
@@ -167,118 +167,32 @@ const Playground = () => {
               <div className="mt-5 shadow-shadow-color bg-white rounded-[8px] max-h-[calc(100%_-_115px)] overflow-y-auto shadow w-[100%]">
                 <div className="p-7">
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-[20px]">
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
-                    <div className="relative aspect-square">
-                      <img
-                        className="h-full w-full object-cover rounded-[16px]"
-                        src="https://t4.ftcdn.net/jpg/05/55/71/83/360_F_555718315_XAi4cgO4s2uBRshlJZ8wXjAWkptX8023.jpg"
-                      />
-                      <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
-                        hello
-                      </p>
-                    </div>
+                    {
+                      themeData.map((data, index) => {
+                        return (
+                          <div className={`relative aspect-square`} key={index} onClick={() => toggleCategorySelect(data.id)}>
+                            {data.id === selectedCategoryItemId ?
+                              <div className='flex items-center justify-center bg-white rounded-full absolute top-2 right-2 h-[27px] w-[27px]'>
+                                <img src={ORANGE_TICK_ICON} alt='icon' />
+                              </div>
+
+                              : ''}
+                            <img
+                              className="h-full w-full object-cover rounded-[16px]"
+                              src={data.img}
+                            />
+                            <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
+                              {data.content}
+                            </p>
+                          </div>
+                        )
+                      })
+                    }
                   </div>
                   <button
                     onClick={() => setActiveTab(2)}
-                    className="bg-[#F16E22] mx-auto text-[15px] text-white px-3 rounded-md flex items-center mt-5 py-2"
+                    disabled={selectedCategoryItemId == null}
+                    className="bg-[#F16E22] disabled:bg-[#ffaa79] mx-auto text-[15px] text-white px-3 rounded-md flex items-center mt-5 py-2"
                   >
                     Next <img className="ms-1" src={nextIcon} />
                   </button>
