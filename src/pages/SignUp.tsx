@@ -119,7 +119,7 @@ export const SignUp = () => {
               <div className="text-center mt-4">
                 <p className="font-semibold">
                   Already have an account?{' '}
-                  <Link to={'/signin'} className="text-orange-500">
+                  <Link to={'/sign-in'} className="text-orange-500">
                     Sign In
                   </Link>
                 </p>

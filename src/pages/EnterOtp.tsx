@@ -81,11 +81,11 @@ export const EnterOtp = () => {
               <div className="text-center mt-96">
                 <p className="font-semibold">
                   Back to{' '}
-                  <Link to={'/signin'} className="text-orange-400">
+                  <Link to={'/sign-in'} className="text-orange-400">
                     Sign In
                   </Link>{' '}
                   or{' '}
-                  <Link to={'/signup'} className="text-orange-400">
+                  <Link to={'/sign-up'} className="text-orange-400">
                     Sign up
                   </Link>
                 </p>

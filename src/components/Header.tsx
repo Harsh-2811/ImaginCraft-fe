@@ -46,7 +46,7 @@ export const Header: React.FC = () => {
       link: () => (
         <>
           <Link
-            to={'/signin'}
+            to={'/sign-in'}
             className="bg-[#F16E22] text-white px-3 max-w-[157px] rounded-md py-2"
           >
             Log in or sign up

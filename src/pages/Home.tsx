@@ -40,7 +40,7 @@ const Home = () => {
                 </p>
                 <div className="mt-5">
                   <Link
-                    to={'/signin'}
+                    to={'/sign-in'}
                     className="bg-[#F16E22] text-white px-3 rounded-md py-2"
                   >
                     Log in or sign up
