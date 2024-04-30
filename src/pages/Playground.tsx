@@ -311,7 +311,7 @@ const Playground = () => {
               <h1 className="text-[40px] font-bold text-center">
                 Additional Accessories
               </h1>
-              <div className="mt-5 shadow-shadow-color h-[calc(100vh_-_275px)] overflow-y-auto bg-white rounded-[8px] shadow w-[100%]">
+              <div className="mt-5 shadow-shadow-color flex flex-col justify-between h-[calc(100vh_-_275px)] overflow-y-auto bg-white rounded-[8px] shadow w-[100%]">
                 <div className="p-[15px]">
                   <div className="grid md:grid-cols-2 gap-[25px] p-3">
                     <div>
