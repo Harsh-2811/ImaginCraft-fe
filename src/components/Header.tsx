@@ -1,5 +1,5 @@
 import { Link, Outlet } from 'react-router-dom'
-import ImaginCraftLogo from '../assets/logo.png'
+import ImaginCraftLogo from '../assets/logo.svg'
 import React from 'react'
 interface Links {
   link: React.FC
