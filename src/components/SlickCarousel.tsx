@@ -5,10 +5,23 @@ import bgAuthImage from '../assets/authimages.png'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { useSelector } from 'react-redux'
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { RootState } from '../redux/store'
+import { fetchSliderImages } from '../redux/reducer/sliderSlice';
+import { AppDispatch } from '../redux/store';
 
 function CenterMode() {
   const screenSize = useSelector((state: RootState) => state.auth.screenSize)
+  const dispatch = useDispatch<AppDispatch>();
+  const images = useSelector((state: RootState) => state.slider.images);
+  // const status = useSelector((state: RootState) => state.slider.status);
+  // const error = useSelector((state: RootState) => state.slider.error);
+  useEffect(() => {
+    dispatch(fetchSliderImages());
+  }, [])
+
+
   console.warn('screenSize', screenSize)
   console.log(
     ' screenSize?.width >= 1199',
@@ -37,12 +50,30 @@ function CenterMode() {
             : screenSize?.width >= 400 && screenSize?.width <= 599
               ? 2
               : 1,
-    speed: 100,
+    speed: 800,
+    autoplay: true, 
+    autoplaySpeed: 2000, 
   }
+  
+
+  console.log(images, "@@@@@@@@@@@@")
   return (
     <div className="w-full overflow-hidden">
       <Slider {...settings}>
-        <img
+        {
+          images?.map((img, index) => {
+            return (
+              <img
+              key={index}
+                className={`h-[${screenSize?.width <= 799 ? '280px' : '408px'}] mx-auto object-cover rounded-[16px]`}
+                src={img?.image}
+                alt="slide_image"
+              />
+            )
+          })
+        }
+
+        {/* <img
           className={`h-[${screenSize?.width <= 799 ? '280px' : '408px'}] mx-auto object-cover rounded-[16px]`}
           src={bgAuthImage}
           alt="slide_image"
@@ -66,12 +97,7 @@ function CenterMode() {
           className={`h-[${screenSize?.width <= 799 ? '280px' : '408px'}] mx-auto object-cover rounded-[16px]`}
           src={bgAuthImage}
           alt="slide_image"
-        />
-        <img
-          className={`h-[${screenSize?.width <= 799 ? '280px' : '408px'}] mx-auto object-cover rounded-[16px]`}
-          src={bgAuthImage}
-          alt="slide_image"
-        />
+        /> */}
       </Slider>
     </div>
   )

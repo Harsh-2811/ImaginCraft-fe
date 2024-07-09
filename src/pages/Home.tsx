@@ -15,7 +15,9 @@ import CircularText from '../components/CircularText'
 import SlickCarousel from '../components/SlickCarousel'
 import { Link } from 'react-router-dom'
 
+
 const Home = () => {
+  const userToken = localStorage.getItem('user-token');
   return (
     <>
       <div className="max-w-[1220px] px-[20px] mx-auto">
@@ -39,12 +41,23 @@ const Home = () => {
                   unprecedented quality, speed, and style-consistency.
                 </p>
                 <div className="mt-5">
-                  <Link
-                    to={'/sign-in'}
-                    className="bg-[#F16E22] text-white px-3 rounded-md py-2"
-                  >
-                    Log in or sign up
-                  </Link>
+
+                  {
+                    !userToken ? (<Link
+                      to={'/sign-in'}
+                      className="bg-[#F16E22] text-white px-3 rounded-md py-2"
+                    >
+                      Log in or sign up
+                    </Link>
+                    ) : (<Link
+                      to={'/dashboard'}
+                      className="bg-[#F16E22] text-white px-3 max-w-[157px] rounded-md py-2"
+                    >
+                      Dashboard
+                    </Link>)
+                  }
+
+
                 </div>
               </div>
             </div>

@@ -2,10 +2,17 @@ import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import authReducer from './reducer/auth.reducer'
+import sliderReducer from './reducer/sliderSlice'
+import categoryimagesReducer from './reducer/categoryimagesSlice'
+import themeimagesReducer from './reducer/themeimagesSlice'
 
 // Root reducer combining all reducers
 const rootReducer = combineReducers({
   auth: authReducer,
+  slider: sliderReducer,
+  categoryimages:categoryimagesReducer,
+  themeimages:themeimagesReducer,
+
   // Add other reducers here if needed
 })
 

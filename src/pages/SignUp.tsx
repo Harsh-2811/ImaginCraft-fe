@@ -4,14 +4,23 @@ import googleLogo from '../assets/google.png'
 import { Link } from 'react-router-dom'
 import bgAuthImage from '../assets/authimages.png'
 import appLogo from '../assets/logo.png'
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
+import { useState } from 'react'
 
 export const SignUp = () => {
+  const [value, setValue] = useState()
+  const [isOrganization, setIsOrganization] = useState(false) // State to track radio button selection
+
+  const handleRadioChange = (event) => {
+    setIsOrganization(event.target.value === 'organization');
+  }
   return (
     <>
       <DesignWrapper>
         <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12">
           {/* login left side */}
-          <div className="relative h-[697px] max-w-full lg:max-w-[690px] md:col-span-6 lg:col-span-7">
+          <div className="relative h-[840px] max-w-full lg:max-w-[816px] md:col-span-6 lg:col-span-7">
             {/* <div className="bg-authside-bg h-full opacity-100 w-full bg-no-repeat"></div> */}
             <div className="bg-white w-[204px] px-2 py-3 absolute top-0 left-0 rounded-tl-[5px] rounded-br-[5px] ">
               <img src={appLogo} />
@@ -36,15 +45,57 @@ export const SignUp = () => {
             <div className="mt-10 text-center">
               <p className="text-3xl font-bold text-blue-800">Sign Up</p>
             </div>
-            <div className="mt-2 p-8">
-              <div className="flex flex-col">
-                <label className="">Full Name</label>
+            <div className='px-8 pt-8 gap-4 signup_radio flex items-center'>
+
+              <div className="flex items-center">
                 <input
-                  type="text"
-                  className="border rounded px-2 py-2"
-                  placeholder="Enter Your Name"
+                  checked={!isOrganization} // Set checked based on state
+                  id="orange-radio"
+                  type="radio"
+                  value="individual"
+                  name="default-radio"
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 dark:bg-gray-700 dark:border-gray-600"
+                  onChange={handleRadioChange}
                 />
+                <label for="orange-radio" className="ms-2 text-md font-medium text-gray-900 dark:text-gray-300">Individual User</label>
               </div>
+              <div className="flex items-center">
+                <input
+                  checked={isOrganization} // Set checked based on state (inverse of individual)
+                  id="default-radio-1"
+                  type="radio"
+                  value="organization"
+                  name="default-radio"
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 dark:bg-gray-700 dark:border-gray-600"
+                  onChange={handleRadioChange}
+                />
+                <label for="default-radio-1" className="ms-2 text-md font-medium text-gray-900 dark:text-gray-300">Organization</label>
+              </div>
+            </div>
+            <div className="mt-2 px-8 pb-8 pt-4">
+              <div className='flex'>
+
+
+                <div className="flex flex-col w-[250px]">
+                  <label className="">Full Name</label>
+                  <input
+                    type="text"
+                    className="border rounded px-2 py-2"
+                    placeholder="Enter Your Name"
+                  />
+                </div>
+                <div className='ms-2 w-[258px] phone_no'>
+                  <label className="">Enter Phone No.</label>
+                  <PhoneInput
+                    placeholder="Enter phone number"
+                    value={value}
+                    onChange={setValue}
+                    country={'in'}
+                  />
+                </div>
+              </div>
+
+
               <div className="flex flex-col mt-4">
                 <label className="">Email Address</label>
                 <input
@@ -53,22 +104,50 @@ export const SignUp = () => {
                   placeholder="Enter Your Email"
                 />
               </div>
-              <div className="flex mt-4 flex-col">
-                <label className="">Password</label>
-                <input
-                  type="text"
-                  className="border rounded px-2 py-2"
-                  placeholder="Enter Your Password"
-                />
+              <div className='flex gap-2 mt-4 w-full'>
+
+                <div className="flex flex-col w-[50%]">
+                  <label className="">Password</label>
+                  <input
+                    type="text"
+                    className="border rounded px-2 py-2"
+                    placeholder="Enter Your Password"
+                  />
+                </div>
+                <div className="flex flex-col w-[50%]">
+                  <label className="">Confirm Password</label>
+                  <input
+                    type="text"
+                    className="border rounded px-2 py-2"
+                    placeholder="Enter Your Password"
+                  />
+                </div>
               </div>
-              <div className="flex mt-4 flex-col">
-                <label className="">Confirm Password</label>
-                <input
-                  type="text"
-                  className="border rounded px-2 py-2"
-                  placeholder="Enter Your Password"
-                />
-              </div>
+
+              {
+                isOrganization && (
+                  <>
+                    <div className="flex mt-4 flex-col w-[100%]">
+                      <label className="">Organization Name</label>
+                      <input
+                        type="text"
+                        className="border rounded px-2 py-2"
+                        placeholder="Enter Organization Name"
+                      />
+                    </div>
+                    <div className="flex mt-4 flex-col w-[100%]">
+                      <label className="">Website URL</label>
+                      <input
+                        type="text"
+                        className="border rounded px-2 py-2"
+                        placeholder="Enter Website URL"
+                      />
+
+                    </div>
+                  </>
+                )
+              }
+
               <div className="flex mt-2 flex-row justify-between">
                 <div className="flex items-center mb-4">
                   <input

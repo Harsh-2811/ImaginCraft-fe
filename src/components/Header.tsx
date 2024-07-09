@@ -5,6 +5,7 @@ interface Links {
   link: React.FC
 }
 export const Header: React.FC = () => {
+  const userToken = localStorage.getItem('user-token');
   const links: Array<Links> = [
     {
       link: () => (
@@ -42,19 +43,36 @@ export const Header: React.FC = () => {
         </>
       ),
     },
-    {
-      link: () => (
-        <>
-          <Link
-            to={'/sign-in'}
-            className="bg-[#F16E22] text-white px-3 max-w-[157px] rounded-md py-2"
-          >
-            Log in or sign up
-          </Link>
-        </>
-      ),
-    },
-  ]
+    ...(!userToken
+      ? [
+          {
+            link: () => (
+              <>
+                <Link
+                  to={'/sign-in'}
+                  className="bg-[#F16E22] text-white px-3 max-w-[157px] rounded-md py-2"
+                >
+                  Log in or sign up
+                </Link>
+              </>
+            ),
+          },
+        ]
+      : [
+          {
+            link: () => (
+              <>
+                <Link
+                  to={'/dashboard'}
+                  className="bg-[#F16E22] text-white px-3 max-w-[157px] rounded-md py-2"
+                >
+                  Dashboard
+                </Link>
+              </>
+            ),
+          },
+        ]),
+  ];
   return (
     <>
       <div className="h-[90px] w-full border-b-2">
