@@ -18,6 +18,7 @@ import BillingDetails from '../pages/Dashboard/BillingDetails';
 import ImagesHistory from '../pages/Dashboard/ImagesHistory';
 import ProtectedRoute from './ProtectedRoute';
 import LoginPopup from '../pages/LoginPopup';
+import Pricing from '../pages/Pricing';
 
 const AppRoutes: React.FC = () => {
   const location = useLocation();
@@ -32,10 +33,12 @@ const AppRoutes: React.FC = () => {
   return (
     <>
       <Routes>
+
         <Route path="/" element={<HeaderWrapper />}>
           <Route path="/" index element={<App />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/playground" element={
             <ProtectedRoute>
               <Playground />

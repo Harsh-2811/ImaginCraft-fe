@@ -32,6 +32,21 @@ const SidebarPanel = () => {
               </svg>
               <p className='ms-3'>Dashboard</p>
             </li>
+            <li className={`flex px-4 py-[0.6rem] items-center rounded-lg cursor-pointer ${pathname.includes("imageshistory") ? "bg-orange-400" : ""} `}
+            onClick={() => navigate("/imageshistory")}
+            >
+              <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_775_726)">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H16V12.7188H0V0ZM4.5 3.30729C5.07422 3.30729 5.54036 3.77344 5.54036 4.34766C5.54036 4.92318 5.07422 5.38802 4.5 5.38802C3.92578 5.38802 3.45964 4.92187 3.45964 4.34766C3.45964 3.77214 3.92578 3.30729 4.5 3.30729ZM8.88021 7.77344L10.9622 4.17448L13.1745 9.76823H2.85286V9.07422L3.72005 9.03125L4.58724 6.90625L5.02083 8.42448H6.32161L7.44922 5.51953L8.88021 7.77344ZM1.1888 1.05339H14.8125V11.6641H1.1888V1.05339Z" fill="white" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_775_726">
+                    <rect width="16" height="12.7188" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <p className='ms-3'>Image Galary</p>
+            </li>
 
             <li className={`flex px-4 py-[0.6rem] items-center rounded-lg cursor-pointer ${pathname.includes("profile") ? "bg-orange-400" : ""}`}
             onClick={() => navigate("/profile")}
@@ -46,10 +61,10 @@ const SidebarPanel = () => {
                   </clipPath>
                 </defs>
               </svg>
-              <p className='ms-3'>Profile</p>
+              <p className='ms-3'>Personal Details</p>
             </li>
 
-            <li className={`flex px-4 py-[0.6rem] items-center rounded-lg cursor-pointer ${pathname.includes("apikeys") ? "bg-orange-400" : ""} `}
+            {/* <li className={`flex px-4 py-[0.6rem] items-center rounded-lg cursor-pointer ${pathname.includes("apikeys") ? "bg-orange-400" : ""} `}
             onClick={() => navigate("/apikeys")}
             >
               <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,7 +78,7 @@ const SidebarPanel = () => {
                 </defs>
               </svg>
               <p className='ms-3'>API Keys</p>
-            </li>
+            </li> */}
 
             <li className={`flex px-4 py-[0.6rem] items-center rounded-lg cursor-pointer ${pathname.includes("billing-details") ? "bg-orange-400" : ""} `}
              onClick={() => navigate("/billing-details")}
@@ -78,22 +93,7 @@ const SidebarPanel = () => {
                   </clipPath>
                 </defs>
               </svg>
-              <p className='ms-3'>Billing Details</p>
-            </li>
-            <li className={`flex px-4 py-[0.6rem] items-center rounded-lg cursor-pointer ${pathname.includes("imageshistory") ? "bg-orange-400" : ""} `}
-            onClick={() => navigate("/imageshistory")}
-            >
-              <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_775_726)">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H16V12.7188H0V0ZM4.5 3.30729C5.07422 3.30729 5.54036 3.77344 5.54036 4.34766C5.54036 4.92318 5.07422 5.38802 4.5 5.38802C3.92578 5.38802 3.45964 4.92187 3.45964 4.34766C3.45964 3.77214 3.92578 3.30729 4.5 3.30729ZM8.88021 7.77344L10.9622 4.17448L13.1745 9.76823H2.85286V9.07422L3.72005 9.03125L4.58724 6.90625L5.02083 8.42448H6.32161L7.44922 5.51953L8.88021 7.77344ZM1.1888 1.05339H14.8125V11.6641H1.1888V1.05339Z" fill="white" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_775_726">
-                    <rect width="16" height="12.7188" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-              <p className='ms-3'>Images History</p>
+              <p className='ms-3'>Billing History</p>
             </li>
 
           </ul>
