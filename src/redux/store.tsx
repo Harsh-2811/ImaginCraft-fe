@@ -10,8 +10,8 @@ import themeimagesReducer from './reducer/themeimagesSlice'
 const rootReducer = combineReducers({
   auth: authReducer,
   slider: sliderReducer,
-  categoryimages:categoryimagesReducer,
-  themeimages:themeimagesReducer,
+  categoryimages: categoryimagesReducer,
+  themeimages: themeimagesReducer,
 
   // Add other reducers here if needed
 })

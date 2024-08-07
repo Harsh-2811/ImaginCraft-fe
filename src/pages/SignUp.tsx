@@ -13,7 +13,7 @@ export const SignUp = () => {
   const [isOrganization, setIsOrganization] = useState(false) // State to track radio button selection
 
   const handleRadioChange = (event) => {
-    setIsOrganization(event.target.value === 'organization');
+    setIsOrganization(event.target.value === 'organization')
   }
   return (
     <>
@@ -45,8 +45,7 @@ export const SignUp = () => {
             <div className="mt-10 text-center">
               <p className="text-3xl font-bold text-blue-800">Sign Up</p>
             </div>
-            <div className='px-8 pt-8 gap-4 signup_radio flex items-center'>
-
+            <div className="px-8 pt-8 gap-4 signup_radio flex items-center">
               <div className="flex items-center">
                 <input
                   checked={!isOrganization} // Set checked based on state
@@ -57,7 +56,12 @@ export const SignUp = () => {
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 dark:bg-gray-700 dark:border-gray-600"
                   onChange={handleRadioChange}
                 />
-                <label for="orange-radio" className="ms-2 text-md font-medium text-gray-900 dark:text-gray-300">Individual User</label>
+                <label
+                  for="orange-radio"
+                  className="ms-2 text-md font-medium text-gray-900 dark:text-gray-300"
+                >
+                  Individual User
+                </label>
               </div>
               <div className="flex items-center">
                 <input
@@ -69,13 +73,16 @@ export const SignUp = () => {
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 dark:bg-gray-700 dark:border-gray-600"
                   onChange={handleRadioChange}
                 />
-                <label for="default-radio-1" className="ms-2 text-md font-medium text-gray-900 dark:text-gray-300">Organization</label>
+                <label
+                  for="default-radio-1"
+                  className="ms-2 text-md font-medium text-gray-900 dark:text-gray-300"
+                >
+                  Organization
+                </label>
               </div>
             </div>
             <div className="mt-2 px-8 pb-8 pt-4">
-              <div className='flex'>
-
-
+              <div className="flex">
                 <div className="flex flex-col w-[250px]">
                   <label className="">Full Name</label>
                   <input
@@ -84,7 +91,7 @@ export const SignUp = () => {
                     placeholder="Enter Your Name"
                   />
                 </div>
-                <div className='ms-2 w-[258px] phone_no'>
+                <div className="ms-2 w-[258px] phone_no">
                   <label className="">Enter Phone No.</label>
                   <PhoneInput
                     placeholder="Enter phone number"
@@ -95,7 +102,6 @@ export const SignUp = () => {
                 </div>
               </div>
 
-
               <div className="flex flex-col mt-4">
                 <label className="">Email Address</label>
                 <input
@@ -104,8 +110,7 @@ export const SignUp = () => {
                   placeholder="Enter Your Email"
                 />
               </div>
-              <div className='flex gap-2 mt-4 w-full'>
-
+              <div className="flex gap-2 mt-4 w-full">
                 <div className="flex flex-col w-[50%]">
                   <label className="">Password</label>
                   <input
@@ -124,29 +129,26 @@ export const SignUp = () => {
                 </div>
               </div>
 
-              {
-                isOrganization && (
-                  <>
-                    <div className="flex mt-4 flex-col w-[100%]">
-                      <label className="">Organization Name</label>
-                      <input
-                        type="text"
-                        className="border rounded px-2 py-2"
-                        placeholder="Enter Organization Name"
-                      />
-                    </div>
-                    <div className="flex mt-4 flex-col w-[100%]">
-                      <label className="">Website URL</label>
-                      <input
-                        type="text"
-                        className="border rounded px-2 py-2"
-                        placeholder="Enter Website URL"
-                      />
-
-                    </div>
-                  </>
-                )
-              }
+              {isOrganization && (
+                <>
+                  <div className="flex mt-4 flex-col w-[100%]">
+                    <label className="">Organization Name</label>
+                    <input
+                      type="text"
+                      className="border rounded px-2 py-2"
+                      placeholder="Enter Organization Name"
+                    />
+                  </div>
+                  <div className="flex mt-4 flex-col w-[100%]">
+                    <label className="">Website URL</label>
+                    <input
+                      type="text"
+                      className="border rounded px-2 py-2"
+                      placeholder="Enter Website URL"
+                    />
+                  </div>
+                </>
+              )}
 
               <div className="flex mt-2 flex-row justify-between">
                 <div className="flex items-center mb-4">
