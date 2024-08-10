@@ -36,7 +36,9 @@ function ModalBlank({ children, id, modalOpen, setModalOpen }: any) {
         leave="transition ease-out duration-100"
         leaveStart="opacity-100"
         leaveEnd="opacity-0"
-        aria-hidden="true" appear={undefined}      />
+        aria-hidden="true"
+        appear={undefined}
+      />
       {/* Modal dialog */}
       <Transition
         id={id}
@@ -49,7 +51,9 @@ function ModalBlank({ children, id, modalOpen, setModalOpen }: any) {
         enterEnd="opacity-100 translate-y-0"
         leave="transition ease-in-out duration-200"
         leaveStart="opacity-100 translate-y-0"
-        leaveEnd="opacity-0 translate-y-4" appear={undefined}      >
+        leaveEnd="opacity-0 translate-y-4"
+        appear={undefined}
+      >
         <div
           className={`bg-white dark:bg-slate-800 rounded-[7px] shadow-lg overflow-auto w-[677px]`}
         >

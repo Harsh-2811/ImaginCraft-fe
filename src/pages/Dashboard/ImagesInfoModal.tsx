@@ -2,7 +2,7 @@ import ModalBlank from '../../components/ModalBlank'
 import authimages from '../../assets/authimages.png'
 import Download from '../../assets/download.svg'
 
-const ImagesInfoModal = ({ DangerModalOpen, setDangerModalOpen }:any) => {
+const ImagesInfoModal = ({ DangerModalOpen, setDangerModalOpen }: any) => {
   return (
     <>
       <div className="m-1.5">
