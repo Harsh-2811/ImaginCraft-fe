@@ -1,10 +1,15 @@
-import React from 'react'
+import  { useState } from 'react'
 import Footer from '../components/Footer'
 import LogoSlider from '../components/LogoSlider'
 import RIGHT_ORANGE_ICON from '../assets/orangeRightIcon.svg'
 import RIGHT_BLUE_ICON from '../assets/blueRightCircle.svg'
 
 const Pricing = () => {
+  const [isMonthly, setIsMonthly] = useState(true);
+
+  const handleToggle = () => {
+    setIsMonthly(prev => !prev);
+  };
   return (
     <>
       <div className="max-w-[926px] px-[20px] mx-auto">
@@ -13,18 +18,24 @@ const Pricing = () => {
             Pricing
           </button>
 
-          <div className="text-centermax-w-[588px]">
+          <div className="text-center max-w-[588px]">
             <h1 className="text-[40px] font-semibold blackText mt-1">
               Explore Our{' '}
               <span className="text-[#F16E22]">Plans and Pricing</span>
             </h1>
           </div>
         </div>
-        <div className="mt-5 flex max-w-full text-xs font-semibold tracking-wider text-center whitespace-nowrap rounded-3xl bg-teal-500 bg-opacity-10 w-[220px]">
-          <div className="gap-2.5 px-6 py-4 text-white bg-teal-500 rounded-3xl min-h-[44px] max-md:px-5">
+        <div className="mt-5 flex text-xs font-semibold tracking-wider text-center whitespace-nowrap rounded-3xl bg-teal-500 bg-opacity-10 max-w-max">
+          <div
+            onClick={handleToggle}
+            className={`px-6 py-4  min-h-[44px] ${isMonthly ? 'bg-teal-500 rounded-3xl text-white' : 'text-indigo-900'}`}
+          >
             MONTHLY
           </div>
-          <div className="gap-2.5 self-start px-6 py-3.5 text-indigo-900 max-md:px-5">
+          <div
+            onClick={handleToggle}
+            className={`px-6 py-3.5 min-h-[44px]  ${!isMonthly ? 'bg-teal-500 rounded-3xl text-white' : 'text-indigo-900'}`}
+          >
             YEARLY
           </div>
         </div>

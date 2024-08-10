@@ -10,7 +10,7 @@ export const Header: React.FC = () => {
     {
       link: () => (
         <>
-          <Link to={'/'} className="md:text-lg">
+          <Link to={'/'} className="md:text-lg cursor-pointer">
             Home
           </Link>
         </>
@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
     {
       link: () => (
         <>
-          <Link to={'/about-us'} className="md:text-lg">
+          <Link to={'/about-us'} className="md:text-lg cursor-pointer">
             About Us
           </Link>
         </>
@@ -28,7 +28,7 @@ export const Header: React.FC = () => {
     {
       link: () => (
         <>
-          <Link to={'/contact-us'} className="md:text-lg">
+          <Link to={'/contact-us'} className="md:text-lg cursor-pointer">
             Contact Us
           </Link>
         </>
@@ -37,8 +37,17 @@ export const Header: React.FC = () => {
     {
       link: () => (
         <>
-          <Link to={'/playground'} className="md:text-lg">
+          <Link to={'/playground'} className="md:text-lg cursor-pointer">
             Playground
+          </Link>
+        </>
+      ),
+    },
+    {
+      link: () => (
+        <>
+          <Link to={'/pricing'} className="md:text-lg cursor-pointer">
+            Pricing Plans
           </Link>
         </>
       ),
@@ -64,7 +73,7 @@ export const Header: React.FC = () => {
               <>
                 <Link
                   to={'/dashboard'}
-                  className="bg-[#F16E22] text-white px-3 max-w-[157px] rounded-md py-2"
+                  className="bg-[#F16E22] text-white px-3 max-w-[157px] rounded-md py-2 cursor-pointer"
                 >
                   Dashboard
                 </Link>
@@ -82,7 +91,7 @@ export const Header: React.FC = () => {
               <img src={ImaginCraftLogo} alt="imaginCraft Logo" />
             </a>
           </div>
-          <div className="flex mt-6 gap-6 mr-16 items-center ">
+          <div className="flex mt-6 gap-6 mr-16 items-center">
             {links?.map((link: Links, index: number) => (
               <React.Fragment key={index}>
                 {link?.link('no props')}

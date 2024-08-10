@@ -65,7 +65,7 @@ const SidebarPanel = () => {
                   </clipPath>
                 </defs>
               </svg>
-              <p className="ms-3">Image Galary</p>
+              <p className="ms-3">Image Gallery</p>
             </li>
 
             <li
