@@ -41,7 +41,7 @@ const sliderSlice = createSlice({
         state.status = 'succeeded'
         state.images = action.payload
       })
-      .addCase(fetchSliderImages.rejected, (state, action) => {
+      .addCase(fetchSliderImages.rejected, (state:any, action) => {
         state.status = 'failed'
         state.error = action.error.message
       })

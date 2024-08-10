@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import UP_ICON from '../assets/fa-up.svg'
 import DOWN_ICON from '../assets/fa-down.svg'
 
@@ -30,7 +30,7 @@ const CustomDropdown = () => {
           <h4 className="font-bold text-[#2f2f2f]">Mobile</h4>
           <div
             onClick={(e) => {
-              setIsSelected(e.target.textContent)
+              setIsSelected((e.target as HTMLDivElement).textContent as string)
               setIsActive(!isActive)
             }}
             className="item"
@@ -40,7 +40,7 @@ const CustomDropdown = () => {
           <div
             className="item"
             onClick={(e) => {
-              setIsSelected(e.target.textContent)
+              setIsSelected((e.target as HTMLDivElement).textContent as string)
               setIsActive(!isActive)
             }}
           >
@@ -49,7 +49,7 @@ const CustomDropdown = () => {
           <div
             className="item"
             onClick={(e) => {
-              setIsSelected(e.target.textContent)
+              setIsSelected((e.target as HTMLDivElement).textContent as string)
               setIsActive(!isActive)
             }}
           >

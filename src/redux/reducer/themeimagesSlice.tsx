@@ -53,7 +53,7 @@ const themeimagesSlice = createSlice({
         state.status = 'succeeded'
         state.images = action.payload
       })
-      .addCase(fetchThemeImages.rejected, (state, action) => {
+      .addCase(fetchThemeImages.rejected, (state: any, action) => {
         state.status = 'failed'
         state.error = action.error.message
       })

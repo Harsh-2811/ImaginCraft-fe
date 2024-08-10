@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import ImagesInfoModal from './ImagesInfoModal'
 import bgAuthImage from '../../assets/authimages.png'
 import DOWNLOAD_ICON from '../../assets/download.svg'

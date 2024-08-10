@@ -1,4 +1,3 @@
-import React from 'react'
 import SidebarPanel from './SidebarPanel'
 import DashboardHeader from './DashboardHeader'
 import DashboardBody from './DashboardBody'

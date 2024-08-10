@@ -1,4 +1,3 @@
-import React from 'react'
 import logowhite from '../../assets/logowhite.svg'
 import { useLocation, useNavigate } from 'react-router-dom'
 

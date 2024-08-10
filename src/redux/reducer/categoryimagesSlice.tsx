@@ -52,7 +52,7 @@ const categoryimagesSlice = createSlice({
         state.status = 'succeeded'
         state.images = action.payload
       })
-      .addCase(fetchCategoryImages.rejected, (state, action) => {
+      .addCase(fetchCategoryImages.rejected, (state: any, action) => {
         state.status = 'failed'
         state.error = action.error.message
       })

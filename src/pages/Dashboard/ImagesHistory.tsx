@@ -1,4 +1,3 @@
-import React from 'react'
 import ImagesHistoryBody from './ImagesHistoryBody'
 import DashboardHeader from './DashboardHeader'
 import SidebarPanel from './SidebarPanel'

@@ -3,7 +3,6 @@ import nextIcon from '../assets/next.svg'
 import prevIcon from '../assets/prev.svg'
 import Diamond_Icon from '../assets/blue_diamond_icon.svg'
 import DOWNLOAD_ICON from '../assets/downloadIcon.svg'
-import CustomDropdown from '../components/CustomDropdown'
 import { PlayGroundCarousel } from '../components/PlayGroundCarousel'
 import ORANGE_TICK_ICON from '../assets/orangeTicckIcon.svg'
 import spinner from '../assets/Spinner.svg'
@@ -11,7 +10,7 @@ import premiumcate from '../assets/premiunCat.svg'
 import { fetchCategoryImages } from '../redux/reducer/categoryimagesSlice'
 import { fetchThemeImages } from '../redux/reducer/themeimagesSlice'
 import { useDispatch, useSelector } from 'react-redux'
-import { AppDispatch } from '../redux/store'
+import { AppDispatch, RootState } from '../redux/store'
 
 const Playground = () => {
   const SERVER_IP = 'http://64.227.144.27:8100'
@@ -37,16 +36,16 @@ const Playground = () => {
     dispatch(fetchCategoryImages())
   }, [])
 
-  const toggleThemeSelect = (id) => {
+  const toggleThemeSelect = (id: any) => {
     setSelectedThemeItemId(id === selectedThemeItemId ? null : id)
   }
-  const toggleCategorySelect = (id) => {
+  const toggleCategorySelect = (id: any) => {
     setSelectedCategoryItemId(id === selectedCategoryItemId ? null : id)
   }
-  const toggleCategoryNameSelected = (name) => {
+  const toggleCategoryNameSelected = (name: string) => {
     setSelectedCategoryItemName(name === selectedCategoryItemName ? '' : name)
   }
-  const toggleCategoryNameValues = (values) => {
+  const toggleCategoryNameValues = (values: any) => {
     setSelectedCategoryItemValues(
       values === selectedCategoryItemName ? '' : values
     )
@@ -73,7 +72,7 @@ const Playground = () => {
                     </button>
                   </div>
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-[20px]">
-                    {images.map((data, index) => {
+                    {images.map((data: any, index) => {
                       return (
                         <div
                           className={`relative aspect-square`}
@@ -106,7 +105,7 @@ const Playground = () => {
 
                   <button
                     onClick={() => {
-                      dispatch(fetchThemeImages(selectedCategoryItemId))
+                      dispatch(fetchThemeImages())
                       setActiveTab(1)
                     }}
                     disabled={selectedCategoryItemId == null}
@@ -146,7 +145,7 @@ const Playground = () => {
               <div className="mt-5 shadow-shadow-color bg-white rounded-[8px] max-h-[calc(100%_-_107px)] overflow-y-auto shadow w-[100%]">
                 <div className="p-7">
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-[20px]">
-                    {themeimages.map((data, index) => {
+                    {themeimages.map((data: any, index) => {
                       return (
                         <div
                           className={`relative aspect-square`}

@@ -1,4 +1,3 @@
-import React from 'react'
 import Footer from '../components/Footer'
 import MovingText from '../components/MovingText'
 import LogoSlider from '../components/LogoSlider'

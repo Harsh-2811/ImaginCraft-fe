@@ -9,10 +9,10 @@ import 'react-phone-input-2/lib/style.css'
 import { useState } from 'react'
 
 export const SignUp = () => {
-  const [value, setValue] = useState()
+  const [value, setValue] = useState<any>()
   const [isOrganization, setIsOrganization] = useState(false) // State to track radio button selection
 
-  const handleRadioChange = (event) => {
+  const handleRadioChange = (event: any) => {
     setIsOrganization(event.target.value === 'organization')
   }
   return (
@@ -57,7 +57,7 @@ export const SignUp = () => {
                   onChange={handleRadioChange}
                 />
                 <label
-                  for="orange-radio"
+                  htmlFor="orange-radio"
                   className="ms-2 text-md font-medium text-gray-900 dark:text-gray-300"
                 >
                   Individual User
@@ -74,7 +74,7 @@ export const SignUp = () => {
                   onChange={handleRadioChange}
                 />
                 <label
-                  for="default-radio-1"
+                  htmlFor="default-radio-1"
                   className="ms-2 text-md font-medium text-gray-900 dark:text-gray-300"
                 >
                   Organization
@@ -96,7 +96,7 @@ export const SignUp = () => {
                   <PhoneInput
                     placeholder="Enter phone number"
                     value={value}
-                    onChange={setValue}
+                    onChange={(e: any) => setValue(e.target.value)}
                     country={'in'}
                   />
                 </div>
