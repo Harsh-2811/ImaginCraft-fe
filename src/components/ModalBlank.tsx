@@ -1,12 +1,12 @@
-import React, { useRef, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 import Transition from '../utils/Transition'
 
-function ModalBlank({ children, id, modalOpen, setModalOpen }) {
-  const modalContent = useRef(null)
+function ModalBlank({ children, id, modalOpen, setModalOpen }: any) {
+  const modalContent: any = useRef(null)
 
   // close on click outside
   useEffect(() => {
-    const clickHandler = ({ target }) => {
+    const clickHandler = ({ target }: any) => {
       if (!modalOpen || modalContent.current.contains(target)) return
       setModalOpen(false)
     }
@@ -16,7 +16,7 @@ function ModalBlank({ children, id, modalOpen, setModalOpen }) {
 
   // close if the esc key is pressed
   useEffect(() => {
-    const keyHandler = ({ keyCode }) => {
+    const keyHandler = ({ keyCode }: any) => {
       if (!modalOpen || keyCode !== 27) return
       setModalOpen(false)
     }
@@ -37,6 +37,7 @@ function ModalBlank({ children, id, modalOpen, setModalOpen }) {
         leaveStart="opacity-100"
         leaveEnd="opacity-0"
         aria-hidden="true"
+        appear={undefined}
       />
       {/* Modal dialog */}
       <Transition
@@ -51,6 +52,7 @@ function ModalBlank({ children, id, modalOpen, setModalOpen }) {
         leave="transition ease-in-out duration-200"
         leaveStart="opacity-100 translate-y-0"
         leaveEnd="opacity-0 translate-y-4"
+        appear={undefined}
       >
         <div
           className={`bg-white dark:bg-slate-800 rounded-[7px] shadow-lg overflow-auto w-[677px]`}

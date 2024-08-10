@@ -25,12 +25,15 @@
     "react-transition-group": "^4.4.5",
     "redux-persist": "^6.0.0",
     "slick-carousel": "^1.8.1",
-    "swiper": "^8.4.5"
+    "swiper": "^11.1.9"
   },
   "devDependencies": {
     "@types/node": "^20.14.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
+    "@types/react-slick": "^0.23.13",
+    "@types/react-transition-group": "^4.4.10",
+    "@types/swiper": "^6.0.0",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",

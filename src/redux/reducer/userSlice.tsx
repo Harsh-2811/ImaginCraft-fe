@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { RootState } from '../store'
 import { toast } from 'react-toastify'
 
 const { VITE_API_URL } = import.meta.env
@@ -38,7 +37,7 @@ export const loginUser = createAsyncThunk(
         toast.error(data.detail)
       }
       return data
-    } catch (error) {
+    } catch (error: any) {
       return thunkAPI.rejectWithValue(error.message)
     }
   }

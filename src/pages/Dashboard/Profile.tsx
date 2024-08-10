@@ -1,4 +1,3 @@
-import React from 'react'
 import ProfileBody from './ProfileBody'
 import DashboardHeader from './DashboardHeader'
 import SidebarPanel from './SidebarPanel'

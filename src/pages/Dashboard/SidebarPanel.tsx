@@ -1,4 +1,3 @@
-import React from 'react'
 import logowhite from '../../assets/logowhite.svg'
 import { useLocation, useNavigate } from 'react-router-dom'
 
@@ -65,7 +64,7 @@ const SidebarPanel = () => {
                   </clipPath>
                 </defs>
               </svg>
-              <p className="ms-3">Image Galary</p>
+              <p className="ms-3">Image Gallery</p>
             </li>
 
             <li

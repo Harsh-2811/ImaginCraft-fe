@@ -1,16 +1,18 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import arrowIcon from '../assets/playgroundRouteIcon.svg'
 
 const CircularText = () => {
   useEffect(() => {
-    const text = document.querySelector('.text')
-    text.innerHTML = text.innerText
-      .split('')
-      .map(
-        (char, i) =>
-          `<span style="transform:rotate(${i * 5.9}deg)">${char}</span>`
-      )
-      .join('')
+    const text: any = document.querySelector('.text')
+    if (text) {
+      text.innerHTML = text.innerText
+        .split('')
+        .map(
+          (char: any, i: number) =>
+            `<span style="transform:rotate(${i * 5.9}deg)">${char}</span>`
+        )
+        .join('')
+    }
   }, [])
 
   return (

@@ -1,4 +1,3 @@
-import React from 'react'
 import Footer from '../components/Footer'
 import doubleTickIcon from '../assets/doubleTickIcon.svg'
 import bgAuthImage from '../assets/authimages.png'
