@@ -1,15 +1,15 @@
-import  { useState } from 'react'
+import { useState } from 'react'
 import Footer from '../components/Footer'
 import LogoSlider from '../components/LogoSlider'
 import RIGHT_ORANGE_ICON from '../assets/orangeRightIcon.svg'
 import RIGHT_BLUE_ICON from '../assets/blueRightCircle.svg'
 
 const Pricing = () => {
-  const [isMonthly, setIsMonthly] = useState(true);
+  const [isMonthly, setIsMonthly] = useState(true)
 
   const handleToggle = () => {
-    setIsMonthly(prev => !prev);
-  };
+    setIsMonthly((prev) => !prev)
+  }
   return (
     <>
       <div className="max-w-[926px] px-[20px] mx-auto">

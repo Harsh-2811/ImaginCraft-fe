@@ -55,7 +55,7 @@ function CenterMode() {
   return (
     <div className="w-full overflow-hidden">
       <Slider {...settings}>
-        {images?.map((img:any, index) => {
+        {images?.map((img: any, index) => {
           return (
             <img
               key={index}
@@ -65,7 +65,7 @@ function CenterMode() {
             />
           )
         })}
-{/* 
+        {/* 
         <img
           className={`h-[${screenSize?.width <= 799 ? '280px' : '408px'}] mx-auto object-cover rounded-[16px]`}
           src={bgAuthImage}
