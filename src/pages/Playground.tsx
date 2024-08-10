@@ -13,25 +13,29 @@ import { fetchThemeImages } from '../redux/reducer/themeimagesSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch } from '../redux/store'
 
-
 const Playground = () => {
-  const SERVER_IP = "http://64.227.144.27:8100";
+  const SERVER_IP = 'http://64.227.144.27:8100'
   const [activeTab, setActiveTab] = useState(0)
   const [selectedThemeItemId, setSelectedThemeItemId] = useState(null)
   const [selectedCategoryItemId, setSelectedCategoryItemId] = useState(null)
-  const [selectedCategoryItemName, setSelectedCategoryItemName] = useState("")
-  const [selectedCategoryItemValues, setSelectedCategoryItemValues] = useState([])
+  const [selectedCategoryItemName, setSelectedCategoryItemName] = useState('')
+  const [selectedCategoryItemValues, setSelectedCategoryItemValues] = useState(
+    []
+  )
   // const screenSize = useSelector((state: RootState) => state.auth.screenSize)
-  const dispatch = useDispatch<AppDispatch>();
-  const images = useSelector((state: RootState) => state.categoryimages.images);
-  const themeimages = useSelector((state: RootState) => state.themeimages.images);
-  const themeImagesStatus = useSelector((state: RootState) => state.themeimages.status);
-  console.log(selectedCategoryItemValues, "@@@@@@@@@")
+  const dispatch = useDispatch<AppDispatch>()
+  const images = useSelector((state: RootState) => state.categoryimages.images)
+  const themeimages = useSelector(
+    (state: RootState) => state.themeimages.images
+  )
+  const themeImagesStatus = useSelector(
+    (state: RootState) => state.themeimages.status
+  )
+  console.log(selectedCategoryItemValues, '@@@@@@@@@')
 
   useEffect(() => {
-    dispatch(fetchCategoryImages());
+    dispatch(fetchCategoryImages())
   }, [])
-
 
   const toggleThemeSelect = (id) => {
     setSelectedThemeItemId(id === selectedThemeItemId ? null : id)
@@ -40,10 +44,12 @@ const Playground = () => {
     setSelectedCategoryItemId(id === selectedCategoryItemId ? null : id)
   }
   const toggleCategoryNameSelected = (name) => {
-    setSelectedCategoryItemName(name === selectedCategoryItemName ? "" : name)
+    setSelectedCategoryItemName(name === selectedCategoryItemName ? '' : name)
   }
   const toggleCategoryNameValues = (values) => {
-    setSelectedCategoryItemValues(values === selectedCategoryItemName ? "" : values)
+    setSelectedCategoryItemValues(
+      values === selectedCategoryItemName ? '' : values
+    )
   }
 
   const activeContent = () => {
@@ -57,14 +63,14 @@ const Playground = () => {
               </h1>
               <div className="mt-5 shadow-shadow-color bg-white rounded-[8px] max-h-[calc(100%_-_107px)] overflow-y-auto shadow w-[100%]">
                 <div className="p-7">
-                  <div className='flex justify-end'>
-                  <button
-                    className="bg-[#fff] border border-[#F16E22] hover:bg-[#F16E22] text-[15px] font-bold text-[#F16E22] hover:text-white px-3 rounded-full flex items-center mb-3 py-2"
-                    style={{transition:"0.3s"}}
+                  <div className="flex justify-end">
+                    <button
+                      className="bg-[#fff] border border-[#F16E22] hover:bg-[#F16E22] text-[15px] font-bold text-[#F16E22] hover:text-white px-3 rounded-full flex items-center mb-3 py-2"
+                      style={{ transition: '0.3s' }}
                     >
-                     <img className="me-1" src={premiumcate} />
-                    Featured Category
-                  </button>
+                      <img className="me-1" src={premiumcate} />
+                      Featured Category
+                    </button>
                   </div>
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-[20px]">
                     {images.map((data, index) => {
@@ -76,8 +82,7 @@ const Playground = () => {
                             toggleCategorySelect(data.id)
                             toggleCategoryNameSelected(data.name)
                             toggleCategoryNameValues(data.values)
-                          }
-                          }
+                          }}
                         >
                           {data.id === selectedCategoryItemId ? (
                             <div className="flex items-center justify-center bg-white rounded-full absolute top-2 right-2 h-[27px] w-[27px]">
@@ -98,18 +103,17 @@ const Playground = () => {
                       )
                     })}
                   </div>
-                 
 
                   <button
                     onClick={() => {
-                      dispatch(fetchThemeImages(selectedCategoryItemId));
+                      dispatch(fetchThemeImages(selectedCategoryItemId))
                       setActiveTab(1)
                     }}
                     disabled={selectedCategoryItemId == null}
                     className="bg-[#F16E22] disabled:bg-[#ffaa79] mx-auto text-[15px] text-white px-3 rounded-md flex items-center mt-5 py-2"
-                    >
+                  >
                     Next <img className="ms-1" src={nextIcon} />
-                  </button>                  
+                  </button>
                 </div>
 
                 <div className="bg-[#00AEB833] h-[49px] rounded-bl-[8px] rounded-br-[8px] px-[15px] flex items-center justify-between">
@@ -135,7 +139,6 @@ const Playground = () => {
       case 1:
         return (
           <>
-
             <div className="flex justify-center max-w-[1150px] px-[10px] md:max-h-full md:pt-[0px] mx-auto items-center h-full flex-col relative">
               <h1 className="text-[40px] font-bold text-center">
                 Select a Theme
@@ -161,7 +164,6 @@ const Playground = () => {
                             className="h-full w-full object-cover rounded-[16px]"
                             src={SERVER_IP + data.image}
                             alt={data.name}
-
                           />
                           <p className="absolute bottom-0 w-full rounded-bl-[16px] rounded-br-[16px] bg-blue-bg text-center text-white text-[12px] font-semibold py-2">
                             {data.name}
@@ -180,9 +182,7 @@ const Playground = () => {
                     </div> */}
                   </div>
 
-                  <div className='flex justify-center gap-x-5'>
-
-
+                  <div className="flex justify-center gap-x-5">
                     <button
                       onClick={() => setActiveTab(0)}
                       // disabled={selectedThemeItemId == null}
@@ -198,9 +198,9 @@ const Playground = () => {
                       className="bg-[#F16E22] disabled:bg-[#ffaa79] text-[15px] text-white px-3 rounded-md flex items-center mt-5 py-2"
                     >
                       Next <img className="ms-1" src={nextIcon} />
-                      {
-                        themeImagesStatus === "loading" ? (<img src={spinner} height={24} width={24} />) : (null)
-                      }
+                      {themeImagesStatus === 'loading' ? (
+                        <img src={spinner} height={24} width={24} />
+                      ) : null}
                     </button>
                   </div>
                 </div>
@@ -235,9 +235,7 @@ const Playground = () => {
                 <div className="p-[15px]">
                   <div className="grid md:grid-cols-2 gap-[25px] p-3">
                     <div>
-                      <label className="text-[15px] mb-2">
-                        Select Effect
-                      </label>
+                      <label className="text-[15px] mb-2">Select Effect</label>
                       {/* <CustomDropdown /> */}
                       <div className="w-full">
                         <select className="w-full border rounded-[5px] h-[45px] border-[#ddd]">
@@ -249,29 +247,31 @@ const Playground = () => {
                       </div>
                     </div>
                     <div>
-                      <label className="text-[15px]">Select {selectedCategoryItemName}</label>
+                      <label className="text-[15px]">
+                        Select {selectedCategoryItemName}
+                      </label>
                       <select className="w-full border rounded-[5px] h-[45px] border-[#ddd]">
                         {selectedCategoryItemValues.map((val, ind) => {
                           return (
                             <option key={ind} value={val}>
                               {val}
                             </option>
-                          );
+                          )
                         })}
-
                       </select>{' '}
                     </div>
 
                     <div>
-                      <label className="text-[15px]">
-                        Remove background?
-                      </label>
+                      <label className="text-[15px]">Remove background?</label>
 
                       <div className="flex items-center mt-3">
                         <label className="inline-flex items-center cursor-pointer">
-                          <input type="checkbox" value="" className="sr-only peer" />
+                          <input
+                            type="checkbox"
+                            value=""
+                            className="sr-only peer"
+                          />
                           <div className="relative w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-orange-400"></div>
-
                         </label>
                       </div>
                     </div>
@@ -283,9 +283,8 @@ const Playground = () => {
                         placeholder="Type here..."
                       />
                     </div>
-
                   </div>
-                  <div className='flex justify-center gap-x-5'>
+                  <div className="flex justify-center gap-x-5">
                     <button
                       onClick={() => setActiveTab(1)}
                       className="bg-[#F16E22] w-fit text-[15px] text-white px-3 rounded-md flex items-center mx-0 mt-5 py-2"

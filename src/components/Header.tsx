@@ -5,7 +5,7 @@ interface Links {
   link: React.FC
 }
 export const Header: React.FC = () => {
-  const userToken = localStorage.getItem('user-token');
+  const userToken = localStorage.getItem('user-token')
   const links: Array<Links> = [
     {
       link: () => (
@@ -72,7 +72,7 @@ export const Header: React.FC = () => {
             ),
           },
         ]),
-  ];
+  ]
   return (
     <>
       <div className="h-[90px] w-full border-b-2">

@@ -12,11 +12,10 @@ export default {
         'shadow-color': 'rgba(0, 0, 0, 0.06)',
         'blue-bg': 'rgba(0, 71, 122, 1)',
         'light-sky-bg': 'rgba(0, 174, 184, 0.1)',
-        "blue-600":"#00477A",
-        "orange-400": "#F16E22",
-        "green-400": "#00AEB8",
-        "green-600":"#0081A8"
-
+        'blue-600': '#00477A',
+        'orange-400': '#F16E22',
+        'green-400': '#00AEB8',
+        'green-600': '#0081A8',
       },
       fontSize: {
         xs: ['0.75rem', { lineHeight: '1.5' }],
